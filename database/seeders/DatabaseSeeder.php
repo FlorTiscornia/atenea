@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-       /*  User::factory()->create([
+       User::factory()->create([
             'name' => 'Elena',
             'email' => 'elenarjonap@gmail.com',
             'password' => 'atenea1990',
@@ -52,7 +52,7 @@ class DatabaseSeeder extends Seeder
             'img' =>'https://img.freepik.com/foto-gratis/anade-real-rodeado-flores-vegetacion-campo-luz-sol_181624-15686.jpg?w=996&t=st=1674656436~exp=1674657036~hmac=0525ff9bf663c6beae1a9bcc2dfe8db1a77b04bb6a61a3cbe4414ef7e08199bd',
             'grade' => '10',
             'isAdmin' => false
-        ]); */
+        ]);
         //falta poner imágenes de CLOUDINARY con drag and drop
     }
 }
