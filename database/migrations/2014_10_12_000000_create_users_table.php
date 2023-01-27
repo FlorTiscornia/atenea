@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
 
             $table->string('name');
-            $table->string('email');
+            $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
@@ -25,7 +25,7 @@ return new class extends Migration
             $table-> string ('lastName', 150);
             $table-> string ('img');
             $table-> integer ('grade');
-            $table-> boolean ('isAdmin');
+            $table-> boolean ('isTeacher');
 
             $table->timestamps();
 
