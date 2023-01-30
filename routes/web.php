@@ -20,8 +20,12 @@ use App\Http\Controllers\UserController;
 
 Auth::routes();
 
+// R del CRUD
 Route::get('/', [UserController::class, 'index'])->name('home');
 Route::get('/home', [UserController::class, 'index']);
 
 // D del CRUD
 Route::delete('/delete{id}', [UserController::class, 'destroy'])->name ('deleteUser');
+
+// C del CRUD
+Route::get('/create', [UserController::class, 'create'])->name ('createUser');

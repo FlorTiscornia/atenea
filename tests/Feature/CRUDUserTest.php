@@ -35,6 +35,18 @@ class CRUDUserTest extends TestCase
             $this->assertCount(0, User::all());
     }
 
+    public function test_aUserCanBeCreated(){
+        $this->withExceptionHandling();
+        $response = $this->post(route('storeUser'),
+        [
+            'name' => 'name',
+            'email' => 'email',
+            'lastName' => 'lastName',
+            'img' =>'img',
+            'grade' => 9,
+            'isTeacher' => false
+        ]);
+    }
 
     /* public function test_anAdoptionCanBeCreated(){
             $this->withExceptionHandling();

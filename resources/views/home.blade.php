@@ -1,6 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
+    <button class="btn btn-secondary">
+        <a href="{{ route('createUser') }}">
+            <div class="text-white fs-4">Crear estudiante</div>
+        </a>
+    </button>
     <p>Hola Mundo</p>
     @foreach ($users as $user)
         <div>
