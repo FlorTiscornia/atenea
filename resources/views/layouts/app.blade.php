@@ -6,6 +6,9 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    
+    <link rel="shortcut icon" type="image/x-icon" href="./img/buhoFavicon.png">    
+    <title>Atenea</title>
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
