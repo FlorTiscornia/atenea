@@ -5,6 +5,7 @@ body{
 
 .container{
     margin-top: 5%!important;
+    border: solid 2px fuchsia!important;
 }
 
 .salute{
@@ -12,4 +13,10 @@ body{
     color: #1F363D!important;
     font-weight: bold!important;
     margin-bottom: 10%!important;
+}
+
+.loginCard{
+    background-color: #70A9A1;
+    border: solid 2px orange;
+
 }

@@ -20,13 +20,19 @@
     
     <!-- Css -->
     <link href="{{ asset('css\login.css') }}" rel="stylesheet">
+    <link href="{{ asset('css\app.css') }}" rel="stylesheet">
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <div class="header" style="height:90px">
+            <div >
+            <img src="https://res.cloudinary.com/de1i08drf/v1675076938/Atenea/ATENEABlanco_gj4xpi.png" style="width: 30%; height: 30%; margin-right: 30px">
+            <p>Tu compañero escolar</p>
+            </div>
+            <nav class="navbar navbar-expand-md navbar-light shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -75,6 +81,7 @@
                 </div>
             </div>
         </nav>
+    </div>
 
         <main class="py-4">
             @yield('content')
