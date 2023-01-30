@@ -15,7 +15,7 @@ v1675077884/Atenea/cabezaBuhoAzulSmall_piqqgc.png"></div>
 
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Email</label>
-                            <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus></label>
+                            <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -26,7 +26,7 @@ v1675077884/Atenea/cabezaBuhoAzulSmall_piqqgc.png"></div>
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Password</label>
-                            <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                            <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" autofocus>
                         </div>                                                        
                         
                                 @error('password')
