@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-        <div class="text-center">{{ __('Hola!') }}</div>
+        <div class="text-center">{{ __('Hola!🦜') }}</div>
             <div class="card bg-success p-2 text-dark bg-opacity-25">
                 
 
@@ -41,24 +41,26 @@
                         </div>
 
 
-                        <div class="row  mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                <button type="submit" class="btn btn-primary text">
                                     {{ __('Ingresar') }}
                                 </button>
                                 <br>
                                     @if (Route::has('password.request'))
                                         <a class="btn btn-link" href="{{ route('password.request') }}">
-                                            {{ __('olvidaste tu contraseña?') }}
+                                            {{ __('olvidaste la contraseña?') }}
                                         </a>
                                     @endif
                                 </br>
                             </div>
                         </div>
-                    </form>
+                    </form>                    
                 </div>
             </div>
         </div>
     </div>
 </div>
+<div class="text-center">{{ __('Curso escolar 2022/2023') }}</div>
 @endsection
+
