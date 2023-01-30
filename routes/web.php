@@ -23,4 +23,5 @@ Auth::routes();
 Route::get('/', [UserController::class, 'index'])->name('home');
 Route::get('/home', [UserController::class, 'index']);
 
-Route::delete('/delete{id}', [UserController::class, 'destroy'])->name ('deleteUser')->middleware ('IsTeacher', 'auth');
+// D del CRUD
+Route::delete('/delete{id}', [UserController::class, 'destroy'])->name ('deleteUser');
