@@ -1,0 +1,15 @@
+body{
+    font-family: 'Francois One'!important;
+    background-color: #EFFCE6 !important;
+}
+
+.container{
+    margin-top: 5%!important;
+}
+
+.salute{
+    font-size: 3em!important;
+    color: #1F363D!important;
+    font-weight: bold!important;
+    margin-bottom: 10%!important;
+}

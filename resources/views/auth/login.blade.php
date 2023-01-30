@@ -4,8 +4,8 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-        <div class="text-center">{{ __('¡Hola!') }}<img src="https://res.cloudinary.com/de1i08drf/
-v1675077884/Atenea/cabezaBuhoAzulSmall_piqqgc.png"></div>
+        <div class="text-center salute">{{ __('¡Hola!') }}<img src="https://res.cloudinary.com/de1i08drf/
+v1675077884/Atenea/cabezaBuhoAzulSmall_piqqgc.png" style="margin-left: 30px"></div>
             <div class="card bg-success p-2 text-dark bg-opacity-25">
                 
 
