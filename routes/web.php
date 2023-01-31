@@ -28,5 +28,5 @@ Route::get('/home', [UserController::class, 'index']);
 Route::delete('/delete{id}', [UserController::class, 'destroy'])->name ('deleteUser');
 
 // C del CRUD
-Route::get('/create', [UserController::class, 'create'])->name ('createUser');
-Route::post('/', [UserController::class, 'store'])->name ('storeUser');
+Route::get('/create', [UserController::class, 'create']) ->name ('createUser');
+Route::post('/', [UserController::class, 'store']) ->name ('storeUser');
