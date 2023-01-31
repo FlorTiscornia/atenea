@@ -43,66 +43,12 @@ class CRUDUserTest extends TestCase
             'email' => 'email',
             'lastName' => 'lastName',
             'img' =>'img',
-            'grade' => 9,
+            'password' => bcrypt('password'),
+            'group' => 1,
             'isTeacher' => false
         ]);
+        $this->assertCount(1, User::all());
     }
 
-    /* public function test_anAdoptionCanBeCreated(){
-            $this->withExceptionHandling();
-
-            $userAdmin = User::factory()->create(['isAdmin' => true]);
-            $this->actingAs($userAdmin);
-
-            $response = $this->post((route('storeAdoption')),
-            [
-                'name' => 'name',
-                'description' => 'description',
-                'spaces' => '80',
-                'img' => 'img',
-                'datetime' => '2022/12/24 18:00:00'
-            ]);
-            $this->assertCount(1, Adoption::all());
-
-            $userNoAdmin = User::factory()->create(['isAdmin' => false]);
-            $this->actingAs($userNoAdmin);
-            
-            $response = $this->post((route('storeAdoption')),
-            [
-                'name' => 'name',
-                'description' => 'description',
-                'spaces' => '80',
-                'img' => 'img',
-                'datetime' => '2022/12/24 18:00:00'
-            ]);
-            $this->assertCount(1, Adoption::all());
-    } */
-
-
-
-    /* public function test_anAdoptionCanBeUpdated(){
-        $this->withExceptionHandling();
-        $adoption = Adoption::factory()->create();
-        $this->assertCount(1, Adoption::all());
-
-        $userAdmin = User::factory()->create(['isAdmin' => true]);
-        $this->actingAs($userAdmin);
-        $response = $this->patch(route('updateAdoption', $adoption->id), ['name' => 'New Name']);
-        $this->assertEquals('New Name', Adoption::first()->name);
-
-        $userNoAdmin = User::factory()->create(['isAdmin' => false]);
-        $this->actingAs($userNoAdmin);
-        $response = $this->patch(route('updateAdoption', $adoption->id), ['name' => 'New Name if not Admin']);
-        $this->assertEquals('New Name', Adoption::first()->name);
-    } */
-
-
-    /* public function test_anAdoptionCanBeShowed(){
-        $this->withExceptionHandling();
-        $adoption = Adoption::factory()->create();
-        $this->assertCount(1, Adoption::all());
-        $response = $this->get(route('showAdoption', $adoption->id));
-        $response->assertSee($adoption->name);
-        $response->assertStatus(200)->assertViewIs('showAdoption');
-    } */
+    
 }

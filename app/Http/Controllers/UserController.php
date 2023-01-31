@@ -41,6 +41,9 @@ class UserController extends Controller
     public function store(Request $request)
     {
         //
+        $user = request ()->except ('_token');
+        User::create($user);
+        return redirect()->route('home');
     }
 
     /**

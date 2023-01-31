@@ -24,7 +24,7 @@ class User extends Authenticatable
 
         'lastName',           
         'img',
-        'grade',
+        'group',
         'isTeacher'
     ];
 

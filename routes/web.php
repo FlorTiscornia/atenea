@@ -29,3 +29,4 @@ Route::delete('/delete{id}', [UserController::class, 'destroy'])->name ('deleteU
 
 // C del CRUD
 Route::get('/create', [UserController::class, 'create'])->name ('createUser');
+Route::post('/', [UserController::class, 'store'])->name ('storeUser');

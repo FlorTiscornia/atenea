@@ -24,7 +24,7 @@ return new class extends Migration
 
             $table-> string ('lastName', 150);
             $table-> string ('img');
-            $table-> integer ('grade');
+            $table-> integer ('group');
             $table-> boolean ('isTeacher')->default (false);
 
             $table->timestamps();
