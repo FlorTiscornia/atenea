@@ -30,7 +30,7 @@
         <div class="header" style="height:90px">
             <div >
             <img src="https://res.cloudinary.com/de1i08drf/v1675076938/Atenea/ATENEABlanco_gj4xpi.png" style="width: 30%; height: 30%; margin-right: 30px">
-            <p>Tu compañero escolar</p>
+            <p>Tu acompañante escolar</p>
             </div>
             <nav class="navbar navbar-expand-md navbar-light shadow-sm">
             <div class="container">

@@ -18,7 +18,7 @@ class UserController extends Controller
         //
         $users = User::get();
         //var_dump($users);
-        return view('home', compact('users'));
+        return view('dashboard', compact('users'));
     }
 
     /**

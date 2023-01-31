@@ -4,6 +4,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,5 +21,10 @@ use App\Http\Controllers\UserController;
 
 Auth::routes();
 
-Route::get('/', [UserController::class, 'index'])->name('home');
-Route::get('/home', [UserController::class, 'index']);
+Route::redirect('/', 'login');
+
+Route::get('/login', [LoginController::class, 'show'])->name('login');
+Route::post('/login', [LoginController::class, 'login']);
+
+Route::get('/dashboard', [UserController::class, 'index'])->name('dashboard');
+Route::get('/dashboard', [UserController::class, 'index']);

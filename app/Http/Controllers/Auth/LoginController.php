@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
@@ -18,7 +19,12 @@ class LoginController extends Controller
     | to conveniently provide its functionality to your applications.
     |
     */
-
+    public function show(){
+        if(Auth::check()){
+            return redirect('/login');
+        }
+        return view('auth.login');
+    }
     use AuthenticatesUsers;
 
     /**
