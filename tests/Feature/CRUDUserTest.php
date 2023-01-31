@@ -41,9 +41,9 @@ class CRUDUserTest extends TestCase
         [
             'name' => 'name',
             'email' => 'email',
-            'lastName' => 'lastName',
+            'lastname' => 'lastname',
             'img' =>'img',
-            'password' => bcrypt('password'),
+            'password' => 'password',
             'group' => 1,
             'isTeacher' => false
         ]);

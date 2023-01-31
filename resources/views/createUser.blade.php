@@ -22,7 +22,7 @@
         </div>
         <div>
             <a class="returnButton"  href="{{ route('home') }}">Volver</a>
-            <button type="submit" value="saveButton" class="createButtonForm"> Añadir estudiante
+            <button type="submit" value="saveButton" class="createButtonForm">Añadir estudiante
             </button>
         </div>
     </form>
