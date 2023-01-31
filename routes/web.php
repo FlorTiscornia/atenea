@@ -30,3 +30,7 @@ Route::delete('/delete{id}', [UserController::class, 'destroy'])->name('deleteUs
 // C del CRUD
 Route::get('/create', [UserController::class, 'create']) ->name('createUser');
 Route::post('/', [UserController::class, 'store']) ->name('storeUser');
+
+// U del CRUD
+Route::get('/edit/{id}', [UserController::class, 'edit'])->name('editUser');
+Route::patch('/user/{id}', [UserController::class, 'update'])->name('updateUser');

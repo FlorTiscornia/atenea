@@ -26,6 +26,7 @@ class CRUDUserTest extends TestCase
         $response->assertStatus(200)
                 ->assertViewIs('home');
     }  
+    
     public function test_aUserCanBeDeleted(){
             $this->withExceptionHandling();
             $users = User::factory()->create();
@@ -48,6 +49,16 @@ class CRUDUserTest extends TestCase
             'isTeacher' => false
         ]);
         $this->assertCount(1, User::all());
+    }
+
+    public function test_aUserCanBeUpdated(){
+        $this->withExceptionHandling();
+
+        $users = User::factory()->create();
+        $this->assertCount(1, User::all());
+
+        $response = $this->patch(route('updateUser', $users->id),['name' => 'New Name']);
+        $this->assertEquals('New Name', User::first()->name);
     }
 
     
