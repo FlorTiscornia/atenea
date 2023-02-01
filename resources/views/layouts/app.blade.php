@@ -29,14 +29,14 @@
     <div id="app">
         <div class="header" style="height:20%">
             <div class="logoConteiner">
-                <img class="logoAtenea" src="https://res.cloudinary.com/de1i08drf/v1675076938/Atenea/ATENEABlanco_gj4xpi.png" style="width: 20%; margin-right: 30px">
+                <img class="logoAtenea" src="https://res.cloudinary.com/de1i08drf/v1675076938/Atenea/ATENEABlanco_gj4xpi.png" style="width: 20%; margin-right: 25px">
                 <p class="slogan">Tu acompañante escolar</p>
-                <nav class="navbar navbar-expand-md navbar-light shadow-sm">
+                <nav class="navbar navbar-expand-md navbar-light">
                 <div class="container">
                     <a class="navbar-brand" href="{{ url('/') }}">
                         {{ config('app.name', 'Laravel') }}
                     </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" francois-controls="navbarSupportedContent" francois-expanded="false" francois-label="{{ __('Toggle navigation') }}">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
@@ -58,12 +58,12 @@
 
                                 
                             @else
-                                <li class="nav-item dropdown">
-                                    <a id="navbarDropdown" class="nav-link dropdown-toggle logName" href="#" role="button" data-bs-toggle="dropdown" francois-haspopup="true" francois-expanded="false" v-pre style="color:white;">
+                                <li class="nav-item dropdown" id="logName">
+                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" francois-haspopup="true" francois-expanded="false" v-pre style="color:white;">
                                         {{ Auth::user()->name }}
                                     </a>
 
-                                    <div class="dropdown-menu dropdown-menu-end" style="background:#70A9A1; text-align:center; width:20%" francois-labelledby="navbarDropdown">
+                                    <div id="logoutButton" class="dropdown-menu dropdown-menu-end"  francois-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                                         document.getElementById('logout-form').submit();">

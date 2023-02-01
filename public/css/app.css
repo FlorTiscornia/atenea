@@ -1,4 +1,23 @@
+@media screen and (max-width: 480px) {
+   /*For mobile phones: */ 
 
+    #logName{
+    font-size: 15px!important;
+    }
+
+    #navbarDropdown{
+        font-size: 10px!important;
+    }
+
+    #logoutButton{
+        width: 70px!important;
+        color: white!important;
+        padding: 0px!important;
+    }
+        
+}
+
+    
 .header{
     background-color: #1F363D!important;
     border: solid 2px yellow;
@@ -20,8 +39,22 @@
 
 .slogan{
     font-size: 3vw;
+    margin-top: 20px;
 }
 
-.logName{
-    font-size: 2vw!important;
+#logName{
+    font-size: 1.5vw!important;
 }
+
+#logoutButton{
+    background-color: #70A9A1;
+    color: white!important;
+    font-family: 'Francois One';
+    text-align: center;
+}
+
+.dropdown-item{
+    color: white!important;
+}
+
+
