@@ -3,7 +3,8 @@
 @section('content')
     <h1>Clase 1ºA</h1>
     <h2>Editar estudiante</h2>
-    <form class="justify-content-center " action="{{ route('storeUser') }}" method="post">
+    <form class="row g-3" action="{{ route('updateUser', $users->id)}}" method="POST">
+        @method('PATCH')
         @csrf
         <div class="mb-3">
             <label for="name" class="form-label">Nombre</label>
@@ -23,7 +24,7 @@
         </div>
         <div>
             <a class="returnButton"  href="{{ route('home') }}">Volver</a>
-            <button type="submit" value="saveButton" class="createButtonForm">Añadir estudiante
+            <button type="submit" value="saveButton" class="saveButtonForm">Guardar cambios
             </button>
         </div>
     </form>

@@ -10,6 +10,8 @@
     @foreach ($users as $user)
         <div>
             <p>{{ ("$user->name") }}</p>
+            <p>{{ ("$user->lastname") }}</p>
+            <p>{{ ("$user->email") }}</p>
             <form action="{{ route('deleteUser', ['id' => $user->id]) }}" method="post">
                 @method('delete')
                 @csrf
