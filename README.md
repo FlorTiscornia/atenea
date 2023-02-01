@@ -80,6 +80,7 @@ To run the tests open terminal and enter the command
 
 ## Methodology:
 <li>Metodología Agile with Scrum</li>
+<li>Mob Programming</li>
 <li>Pair Programming</li>
 <li>TDD</li>
 
