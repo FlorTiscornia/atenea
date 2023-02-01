@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('password')->nullable();
             $table->rememberToken();
 
-            $table-> string ('lastName', 150);
+            $table-> string ('lastname', 150);
             $table-> string ('img');
             $table-> integer ('group')->default(1);
             $table-> boolean ('isTeacher')->default (false);
