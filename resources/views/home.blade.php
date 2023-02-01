@@ -17,7 +17,7 @@
                     <button type="submit" class="btn text-end mt-2" onclick="return confirm('¿Quieres borrar? {{ $user->name }} - ID {{ $user->id }} ')">🗑️
                     </button>
                 </div>
-                <a href="{{ route('editUser', ['id'=>$users->id]) }}">Editar</a>
+                <a href="{{ route('editUser', ['id'=>$user->id]) }}">Editar</a>
 
             </form>
         </div>
