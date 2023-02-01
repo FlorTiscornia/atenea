@@ -2,32 +2,32 @@
 <h1> <img src="https://res.cloudinary.com/de1i08drf/image/upload/v1675077884/Atenea/cabezaBuhoAzulSmall_piqqgc.png" width="3.2%">   Atenea</h1>
 
 ***
-## Project description:
+## 📝Project description:
 Atenea is an app to consult and manage school grades. This project is being developed in a context of Fullstack Bootcamp in Málaga.
 
 
-## Screenshots:
+## 📸Screenshots:
 | Sketch | Figma | Atomic Design |Workflow|
 | :--- | :---: | :---: | :---: |
 |<img src=""> |<img src=""> |<img src=""> |<img src="">|
 
-## Screenshots mobile format:
+## Mobile format:
 | User |
 | --- | --- |
 |<img style="width:135px;" src="">|<img style="width:150px;" src="">|
 
-## Screenshots screen format:
+## Screen format:
 | Admin | 
 | --- | --- |
 |<img style="width:135px;" src="">|<img style="width:150px;" src="">|
 
-## Stacks:
+## 🔧Stacks:
 | Stacks |
 | :--- |
 |<img src="https://res.cloudinary.com/de1i08drf/image/upload/v1675244381/Atenea/stacks_fqertt.png">|
 
 ***
-## Group members:
+## 👩‍💻Group members:
 + FLor Tiscornia https://github.com/FlorTiscornia
 + Lola Navarro https://github.com/ZLoln
 + Lola García https://github.com/LolaGM
@@ -35,7 +35,7 @@ Atenea is an app to consult and manage school grades. This project is being deve
 + Verónica Flores https://github.com/veflo13
 + Elena https://github.com/elenarjonap
 
-## How to install this project
+## 💻How to install this project
 
 1. Clone the project
 ```bash
@@ -69,7 +69,7 @@ git clone https://github.com/FlorTiscornia/atenea.git
       php artisan serve
 ```   
 
-## Run test:
+## 👀Run test:
 To run the tests open terminal and enter the command 
 ```bash
   + php artisan test
@@ -78,14 +78,15 @@ To run the tests open terminal and enter the command
 <img width="450" src="">
 
 
-## Methodology:
+## 📚Methodology:
 <li>Metodología Agile with Scrum</li>
 <li>Mob Programming</li>
 <li>Pair Programming</li>
 <li>TDD</li>
+<li>Patrón de diseño MVC developed with Laravel<li>
 
 
-## Next Steps :
+## 🧪Next Steps :
 <li>xxx</li>
 <li>xxx</li>
 <li>xxx</li>
