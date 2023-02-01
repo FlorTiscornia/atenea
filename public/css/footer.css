@@ -5,13 +5,13 @@
 
 footer{
     background-color: #1F363D;
-    height: 70%;
+    height: 100%;
     display: flex;
     bottom: 0;
     width: 100%;
     margin-top: auto;
     margin-bottom: 0%;
-    justify-content: space-evenly;
+    justify-content: space-between;
 
 }
 
@@ -19,6 +19,8 @@ footer{
     color: white;
     justify-items: center;
     display: flex;
+    padding: 15px 10px;
+    text-align: center;
 }
 
 .smTags{
@@ -26,5 +28,3 @@ footer{
     display: flex;
     margin: 0 10% 0 0;
 }
-
-
