@@ -26,7 +26,7 @@ Route::redirect('/', 'login');
 Route::get('/login', [LoginController::class, 'show'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
 
-Route::get('/dashboard', [UserController::class, 'index'])->name('dashboard');
-Route::get('/dashboard', [UserController::class, 'index']);
+Route::get('/home', [UserController::class, 'index'])->name('home');
+Route::get('/home', [UserController::class, 'index']);
 
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
