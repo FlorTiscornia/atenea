@@ -4,7 +4,6 @@
     border: solid 2px yellow;
     font-family: 'Francois One';
     color: white;
-    
 }
 
 .logoConteiner{
@@ -21,4 +20,8 @@
 
 .slogan{
     font-size: 3vw;
+}
+
+.logName{
+    font-size: 2vw!important;
 }

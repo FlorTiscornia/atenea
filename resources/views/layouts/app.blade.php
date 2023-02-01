@@ -27,7 +27,7 @@
 </head>
 <body>
     <div id="app">
-        <div class="header" style="height:25%">
+        <div class="header" style="height:20%">
             <div class="logoConteiner">
                 <img class="logoAtenea" src="https://res.cloudinary.com/de1i08drf/v1675076938/Atenea/ATENEABlanco_gj4xpi.png" style="width: 20%; margin-right: 30px">
                 <p class="slogan">Tu acompañante escolar</p>
@@ -59,11 +59,11 @@
                                 
                             @else
                                 <li class="nav-item dropdown">
-                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    <a id="navbarDropdown" class="nav-link dropdown-toggle logName" href="#" role="button" data-bs-toggle="dropdown" francois-haspopup="true" francois-expanded="false" v-pre style="color:white;">
                                         {{ Auth::user()->name }}
                                     </a>
 
-                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <div class="dropdown-menu dropdown-menu-end" style="background:#70A9A1; text-align:center; width:20%" francois-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                                         document.getElementById('logout-form').submit();">
