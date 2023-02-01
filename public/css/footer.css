@@ -1,0 +1,29 @@
+*{
+    box-sizing: content-box;
+    
+}
+
+footer{
+    background-color: #1F363D;
+    height: 70%;
+    display: flex;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+    justify-content: space-around;
+}
+
+.copyRight{
+    color: white;
+    justify-items: center;
+    display: flex;
+}
+
+.smTags{
+    color: white;
+    display: flex;
+    justify-content: right;
+    margin: 0 10% 0 0;
+}
+
+
