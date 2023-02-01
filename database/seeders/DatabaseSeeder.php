@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-       User::factory()->create([
+        User::factory()->create([
             'name' => 'Elena',
             'email' => 'elenarjonap@gmail.com',
             'lastName' => 'Perez',
@@ -32,7 +32,7 @@ class DatabaseSeeder extends Seeder
             'isTeacher' => false
         ]);
 
-       User::factory()->create([
+        User::factory()->create([
             'name' => 'Lola',
             'email' => 'canal030w@gmail.com',
             'lastName' => 'Garcia',
