@@ -1,22 +1,39 @@
-body{
+*{
     font-family: 'Francois One'!important;
+}
+
+@media screen and (max-width: 480px) {
+    .salute{
+        margin-top: 12%;
+        margin-bottom: 10%!important;
+    }
+}
+
+body{
     background-color: #EFFCE6 !important;
 }
 
-/*.container{
-    margin-top: 5%!important;
-    border: solid 2px fuchsia!important;
-} */
 
 .salute{
+    margin-top: 8%;
     font-size: 3em!important;
     color: #1F363D!important;
     font-weight: bold!important;
-    margin-bottom: 10%!important;
+    margin-bottom: 8%!important;
 }
 
-.loginCard{
-    background-color: #70A9A1;
-    border: solid 2px orange;
+#loginCard{
+    display: flex;
+    justify-content: center;
+}
 
+#cardContainer{
+        background-color: #70A9A1;
+        width: 314px;
+        border: solid 2px orange;
+        border-radius: 10px;
+}
+
+#scholarYear{
+    margin-top: 8%;
 }
