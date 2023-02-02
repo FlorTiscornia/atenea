@@ -1,0 +1,21 @@
+.btn-secondary{
+    background-color: #1F363D!important;
+
+}
+
+#buttonAdd{
+    text-decoration: none !important;
+}
+
+.studentInfo{
+    display: inline-flex;
+    flex-wrap: wrap;
+    text-decoration: none !important;
+    background-color: #70A9A1;
+}
+
+#studentTag{
+    display: inline-flex;
+    flex-wrap: wrap;
+    text-decoration: none !important;
+}

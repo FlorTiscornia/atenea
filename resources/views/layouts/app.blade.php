@@ -22,6 +22,7 @@
     <link href="{{ asset('css\login.css') }}" rel="stylesheet">
     <link href="{{ asset('css\app.css') }}" rel="stylesheet">
     <link href="{{ asset('css\footer.css') }}" rel="stylesheet">
+    <link href="{{ asset('css\homeView.css') }}" rel="stylesheet">
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
