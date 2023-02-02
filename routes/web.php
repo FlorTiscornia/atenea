@@ -34,3 +34,6 @@ Route::post('/', [UserController::class, 'store']) ->name('storeUser');
 // U del CRUD
 Route::get('/edit/{id}', [UserController::class, 'edit'])->name('editUser');
 Route::patch('/user/{id}', [UserController::class, 'update'])->name('updateUser');
+
+//  SHOW
+Route::get('/show/{id}', [UserController::class, 'show'])->name('showUser');

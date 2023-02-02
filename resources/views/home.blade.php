@@ -6,12 +6,9 @@
             <div class="text-white fs-4">Crear estudiante</div>
         </a>
     </button>
-    <p>Hola Mundo</p>
     @foreach ($users as $user)
         <div>
-            <p>{{ ("$user->name") }}</p>
-            <p>{{ ("$user->lastname") }}</p>
-            <p>{{ ("$user->email") }}</p>
+        <a href="{{ route('showUser', $user->id) }}">{{ ("$user->name") }}</a>
             <form action="{{ route('deleteUser', ['id' => $user->id]) }}" method="post">
                 @method('delete')
                 @csrf
@@ -19,8 +16,7 @@
                     <button type="submit" class="btn text-end mt-2" onclick="return confirm('¿Quieres borrar? {{ $user->name }} - ID {{ $user->id }} ')">🗑️
                     </button>
                 </div>
-                <a href="{{ route('editUser', ['id'=>$user->id]) }}">Editar</a>
-
+                <a href="{{ route('editUser', ['id'=>$user->id]) }}">✏️</a>
             </form>
         </div>
     @endforeach   
