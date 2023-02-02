@@ -21,8 +21,15 @@ use App\Http\Controllers\Auth\LoginController;
 
 Auth::routes();
 
+Route::redirect('/', 'login');
+
+Route::get('/login', [LoginController::class, 'show'])->name('login');
+Route::post('/login', [LoginController::class, 'login']);
+
+
+
 // R del CRUD
-Route::get('/', [UserController::class, 'index'])->name('home');
+Route::get('/home', [UserController::class, 'index'])->name('home');
 Route::get('/home', [UserController::class, 'index']);
 
 // D del CRUD
@@ -38,3 +45,11 @@ Route::patch('/user/{id}', [UserController::class, 'update'])->name('updateUser'
 
 //  SHOW
 Route::get('/show/{id}', [UserController::class, 'show'])->name('showUser');
+
+
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+
+
+
+
+
