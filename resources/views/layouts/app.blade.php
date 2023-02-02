@@ -21,7 +21,7 @@
     <!-- Css -->
     <link href="{{ asset('css\login.css') }}" rel="stylesheet">
     <link href="{{ asset('css\app.css') }}" rel="stylesheet">
-
+    <link href="{{ asset('css\footer.css') }}" rel="stylesheet">
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
@@ -86,5 +86,8 @@
             @yield('content')
         </main>
     </div>
+
+    @include('footer')
+
 </body>
 </html>

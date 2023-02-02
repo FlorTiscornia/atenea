@@ -21,12 +21,20 @@ use App\Http\Controllers\Auth\LoginController;
 
 Auth::routes();
 
-Route::redirect('/', 'login');
-
-Route::get('/login', [LoginController::class, 'show'])->name('login');
-Route::post('/login', [LoginController::class, 'login']);
-
-Route::get('/home', [UserController::class, 'index'])->name('home');
+// R del CRUD
+Route::get('/', [UserController::class, 'index'])->name('home');
 Route::get('/home', [UserController::class, 'index']);
 
-Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+// D del CRUD
+Route::delete('/delete{id}', [UserController::class, 'destroy'])->name('deleteUser');
+
+// C del CRUD
+Route::get('/create', [UserController::class, 'create']) ->name('createUser');
+Route::post('/', [UserController::class, 'store']) ->name('storeUser');
+
+// U del CRUD
+Route::get('/edit/{id}', [UserController::class, 'edit'])->name('editUser');
+Route::patch('/user/{id}', [UserController::class, 'update'])->name('updateUser');
+
+//  SHOW
+Route::get('/show/{id}', [UserController::class, 'show'])->name('showUser');
