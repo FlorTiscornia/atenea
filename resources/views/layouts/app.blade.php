@@ -64,7 +64,7 @@
                                     </a>
 
                                     <div id="logoutButton" class="dropdown-menu dropdown-menu-end"  francois-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="{{ route('logout') }}"
+                                        <a id="outButton" class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                                         document.getElementById('logout-form').submit();">
                                             {{ __('Logout') }}

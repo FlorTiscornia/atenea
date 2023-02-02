@@ -1,12 +1,12 @@
 @media screen and (max-width: 480px) {
    /*For mobile phones: */ 
 
-    #logName{
-    font-size: 15px!important;
+    #navbarDropdown{
+        font-size: 12px!important;
     }
 
-    #navbarDropdown{
-        font-size: 10px!important;
+    #outButton{
+        width: 70px!important;
     }
 
     #logoutButton{
@@ -20,7 +20,7 @@
     
 .header{
     background-color: #1F363D!important;
-    border: solid 2px yellow;
+    border: solid 1px #1F363D;
     font-family: 'Francois One';
     color: white;
 }
@@ -49,6 +49,11 @@
 #logoutButton{
     background-color: #70A9A1;
     color: white!important;
+    display: flex;
+    justify-content: center;    
+}
+
+#outButton{
     font-family: 'Francois One';
     text-align: center;
 }
