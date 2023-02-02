@@ -61,5 +61,13 @@ class CRUDUserTest extends TestCase
         $this->assertEquals('New Name', User::first()->name);
     }
 
+    public function test_aUserCanBeShowed(){
+        $this->withExceptionHandling();
+        $user = User::factory()->create();
+        $this->assertCount(1, User::all());
+        $response = $this->get(route('showUser', $user->id));
+        $response->assertSee($user->name);
+        $response->assertStatus(200)->assertViewIs('showUser');
+    }
     
 }
