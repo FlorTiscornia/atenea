@@ -23,7 +23,9 @@
             <input type="url" name="img" class="form-control" id="img" value="{{$users->img}}">
         </div>
         <div>
-            <a class="returnButton"  href="{{ route('home') }}">Volver</a>
+            <a class="returnButton"  href="{{ route('home') }}"> 
+                <img src="https://res.cloudinary.com/de1i08drf/image/upload/v1675151615/Atenea/flechaAzulIzquierda_ab7yvw.png" alt= "volver a inicio"> 
+            </a>            
             <button type="submit" value="saveButton" class="saveButtonForm">Guardar cambios
             </button>
         </div>
