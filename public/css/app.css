@@ -5,23 +5,24 @@
         font-size: 12px!important;
     }
 
-    #outButton{
-        width: 70px!important;
+    .dropdown-menu{
+        --bs-dropdown-min-width:70px!important;
+        --bs-dropdown-padding-y:0px!important;
     }
 
-    #logoutButton{
-        width: 70px!important;
-        color: white!important;
-        padding: 0px!important;
+    #outButton{
+        font-size:10px!important;
     }
-        
+
 }
 
+*{
+    font-family: 'Francois One'!important;
+}
     
 .header{
     background-color: #1F363D!important;
     border: solid 1px #1F363D;
-    font-family: 'Francois One';
     color: white;
 }
 
@@ -46,16 +47,14 @@
     font-size: 1.5vw!important;
 }
 
-#logoutButton{
-    background-color: #70A9A1;
-    color: white!important;
+.logoutButton{
     display: flex;
-    justify-content: center;    
+    justify-content: center!important;    
 }
 
 #outButton{
-    font-family: 'Francois One';
     text-align: center;
+    font-size: 1.3vw;
 }
 
 .dropdown-item{
