@@ -19,13 +19,13 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
+            $table->string('password')->nullable();
             $table->rememberToken();
 
-            $table-> string ('lastName', 150);
+            $table-> string ('lastname', 150);
             $table-> string ('img');
-            $table-> integer ('grade');
-            $table-> boolean ('isTeacher');
+            $table-> integer ('group')->default(1);
+            $table-> boolean ('isTeacher')->default (false);
 
             $table->timestamps();
 

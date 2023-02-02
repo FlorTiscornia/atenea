@@ -29,6 +29,7 @@ class UserController extends Controller
     public function create()
     {
         //
+        return view ('createUser');
     }
 
     /**
@@ -40,6 +41,9 @@ class UserController extends Controller
     public function store(Request $request)
     {
         //
+        $user = request()->except('_token');
+        User::create($user);
+        return redirect()->route('home');
     }
 
     /**
@@ -51,6 +55,9 @@ class UserController extends Controller
     public function show($id)
     {
         //
+        $user = User::find($id);
+
+        return view ('showUser', compact('user'));
     }
 
     /**
@@ -62,6 +69,8 @@ class UserController extends Controller
     public function edit($id)
     {
         //
+        $users=User::find($id);
+        return view ('editUser', compact('users'));
     }
 
     /**
@@ -74,6 +83,9 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $users = request()->except('_token','_method');
+        User:: where('id', '=', $id)->update($users);
+        return redirect()->route('home');
     }
 
     /**
@@ -85,5 +97,8 @@ class UserController extends Controller
     public function destroy($id)
     {
         //
+        User::destroy($id);
+
+        return redirect()->route('home');
     }
 }
