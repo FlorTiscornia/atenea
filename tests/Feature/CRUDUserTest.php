@@ -21,7 +21,7 @@ class CRUDUserTest extends TestCase
         $this->withExceptionHandling();
         $users = User::factory(3)->create();
         $user = $users[0];
-        $response = $this->get('/');
+        $response = $this->get('/home');
         $response->assertSee($user->name);
         $response->assertStatus(200)
                 ->assertViewIs('home');
