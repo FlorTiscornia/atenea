@@ -30,7 +30,6 @@ Route::post('/login', [LoginController::class, 'login']);
 
 // R del CRUD
 Route::get('/home', [UserController::class, 'index'])->name('home');
-Route::get('/home', [UserController::class, 'index']);
 
 // D del CRUD
 Route::delete('/delete{id}', [UserController::class, 'destroy'])->name('deleteUser');
