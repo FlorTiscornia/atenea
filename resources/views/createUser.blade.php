@@ -15,7 +15,8 @@
         </div>
         <div class="mb-3">
             <label for="email" class="form-label">Email</label>
-            <input type="email" name="email" class="form-control" id="email" placeholder="Escribe el email del estudiante">
+            <input type="email" id="email" name="email" class="form-control" id="email" placeholder="Escribe el email del estudiante">
+            <p id="errorEmail"></p>
         </div>
         <div class="mb-3">
             <label for="img" class="form-label">Fotografía</label>
@@ -25,7 +26,7 @@
             <a class="returnButton"  href="{{ route('home') }}"> 
                 <img src="https://res.cloudinary.com/de1i08drf/image/upload/v1675151615/Atenea/flechaAzulIzquierda_ab7yvw.png" alt= "volver a inicio"> 
             </a>
-            <button type="submit" value="saveButton" class="createButtonForm">Añadir estudiante
+            <button type="submit" value="saveButton" class="createButtonForm" id="createStudentButton">Añadir estudiante
             </button>
         </div>
     </form>
