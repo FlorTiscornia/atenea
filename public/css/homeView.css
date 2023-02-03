@@ -30,14 +30,14 @@
     justify-content: space-between;
     margin:2% 10% 0 10%;
     border: solid 2px orange;
-    
+    width: 20%;
 }
 .studentInfo{
     text-decoration: none !important;
     background-color: #70A9A1;
     border-color: #70A9A1;
     border-radius: 5px;
-    width: 20%;
+    width: 40%;
     
     
 }
