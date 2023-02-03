@@ -25,19 +25,19 @@
 
 #conteinerStudent{
     display: inline-block;
-    flex-wrap: wrap !important;
     flex-direction: row !important;
+    flex-flow: row wrap;
     justify-content: space-between;
     margin:2% 10% 0 10%;
     border: solid 2px orange;
-    width: 20%;
+    
 }
 .studentInfo{
     text-decoration: none !important;
     background-color: #70A9A1;
     border-color: #70A9A1;
     border-radius: 5px;
-    width: 40%;    
+    width: 79px;    
 }
 
 #studentTag{
