@@ -5,7 +5,7 @@
 .btn-secondary{
     background-color: #1F363D!important;
     border-color: #1F363D;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 #buttonAdd{
@@ -13,25 +13,46 @@
 }
 
 .conteiner{
-display: flex;
-justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+    margin:0 10% 0 10%;
+}
+
+.conteiner a{
+    color: white;
+    
+}
+
+#conteinerStudent{
+    display: inline-block;
+    flex-wrap: nowrap !important;
+    flex-direction: row !important;
+    justify-content: space-between;
+    margin:2% 10% 0 10%;
+    border: solid 2px orange;
+    
 }
 .studentInfo{
-    display: inline-flex;
-    flex-wrap: wrap;
     text-decoration: none !important;
     background-color: #70A9A1;
     border-color: #70A9A1;
-    border-radius: 10px;
+    border-radius: 5px;
+    width: 20%;
+    
+    
 }
 
 #studentTag{
-    display: inline-flex;
-    flex-wrap: wrap;
     text-decoration: none !important;
 }
-h5{
-    text-align: right;
     
+
+h5{
+    text-align: right;    
     color: #1F363D;
+}
+
+a:not([class]) {
+    text-decoration: none;
+    color: white !important;
 }

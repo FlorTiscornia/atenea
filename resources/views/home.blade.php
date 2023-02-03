@@ -11,11 +11,12 @@
     </div>
 
     @foreach ($users as $user)
+    <div id="conteinerStudent">
         <div>
             <button class="studentInfo">
                 <a id="studentTag" href="{{ route('showUser', $user->id) }}">{{ ("$user->name") }}</a>
             </button>
-                    <form action="{{ route('deleteUser', ['id' => $user->id]) }}" method="post">
+                    <!-- <form action="{{ route('deleteUser', ['id' => $user->id]) }}" method="post">
                         @method('delete')
                         @csrf
                         <div class="d-flex justify-content-end">
@@ -23,7 +24,8 @@
                             </button>
                         </div>
                         <a href="{{ route('editUser', ['id'=>$user->id]) }}">✏️</a>
-                    </form>
+                    </form> -->
         </div>
+    </div>    
     @endforeach   
 @endsection
