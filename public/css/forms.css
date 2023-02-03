@@ -22,6 +22,15 @@
     flex-direction: row;
     justify-content: space-between;
     margin-top: 5%;
+    color:white;
+}
+
+.resetButton{
+    color: white;
+    background-color: #40798C;
+    border: none;
+    border-radius: 5px;
+    width: 15%;
 }
 
 .formButton{

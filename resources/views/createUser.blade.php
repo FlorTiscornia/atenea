@@ -31,6 +31,7 @@
             <a href="{{ route('home') }}"> 
                 <img src="https://res.cloudinary.com/de1i08drf/image/upload/v1675151615/Atenea/flechaAzulIzquierda_ab7yvw.png" alt= "volver a inicio"> 
             </a>
+            <input type="reset" name="reset "value="Resetear datos" class="resetButton">
             <button type="submit" value="saveButton" class="formButton" id="createStudentButton">Añadir estudiante
             </button>
         </div>
