@@ -20,7 +20,7 @@
                 <div class="mb-3">
                     <label for="email" class="form-label">Email</label>
                     <input type="email" id="email" name="email" class="form-control" id="email" placeholder="Escribe el email del estudiante">
-                    <p id="errorEmail"></p>
+                    <p id="errorEmail" class="errorEmail"></p>
                 </div>
                 <div class="mb-3">
                     <label for="img" class="form-label">Fotografía</label>
