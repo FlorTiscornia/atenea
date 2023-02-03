@@ -5,7 +5,7 @@
 .btn-secondary{
     background-color: #1F363D!important;
     border-color: #1F363D;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 #buttonAdd{
@@ -22,7 +22,7 @@ justify-content: space-between;
     text-decoration: none !important;
     background-color: #70A9A1;
     border-color: #70A9A1;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 #studentTag{

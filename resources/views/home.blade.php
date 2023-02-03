@@ -7,7 +7,7 @@
                 <div class="text-white fs-4">Añadir estudiante</div>
             </a>
         </button>
-        <h5>Clase: {{ ("$user->group") }}A</h5>
+        <h5>Clase 1ºA</h5>
     </div>
 
     @foreach ($users as $user)
