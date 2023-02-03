@@ -28,22 +28,22 @@ class CRUDUserTest extends TestCase
     }  
      */
 
-    public function test_listUserAppearInHomeViewByAdmin(){
+    public function test_listUserAppearInHomeViewByTeacher(){
         $this->withExceptionHandling();
 
         $users = User::factory(2)->create();
         $user = $users[0];
 
-        $userNoAdmin = User::factory()->create(['isAdmin'=>false]);
-        $this->actingAs($userNoAdmin);
+        $userNoTeacher = User::factory()->create(['isTeacher'=>false]);
+        $this->actingAs($userNoTeacher);
         $response=$this->get(route('showUser', $user->id));
         $response -> assertSee($user->name);
         $response ->assertStatus(200)
                 ->assertViewIs('showUser');
 
-        $userAdmin = User::factory()->create(['isAdmin'=>true]);
-        $this->actingAs($userAdmin);
-        $response = $this->get('/');
+        $userTeacher = User::factory()->create(['isTeacher'=>true]);
+        $this->actingAs($userTeacher);
+        $response = $this->get('/home');
         $response -> assertSee($user->name);
         $response ->assertStatus(200)
                 ->assertViewIs('home');

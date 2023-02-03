@@ -32,15 +32,15 @@ Route::post('/login', [LoginController::class, 'login']);
 Route::get('/home', [UserController::class, 'index'])->name('home');
 
 // D del CRUD
-Route::delete('/delete{id}', [UserController::class, 'destroy'])->name('deleteUser');
+Route::delete('/delete{id}', [UserController::class, 'destroy'])->name('deleteUser')->middleware('isTeacher', 'auth');
 
 // C del CRUD
-Route::get('/create', [UserController::class, 'create']) ->name('createUser');
-Route::post('/', [UserController::class, 'store']) ->name('storeUser');
+Route::get('/create', [UserController::class, 'create']) ->name('createUser')->middleware('isTeacher', 'auth');
+Route::post('/', [UserController::class, 'store']) ->name('storeUser')->middleware('isTeacher', 'auth');
 
 // U del CRUD
-Route::get('/edit/{id}', [UserController::class, 'edit'])->name('editUser');
-Route::patch('/user/{id}', [UserController::class, 'update'])->name('updateUser');
+Route::get('/edit/{id}', [UserController::class, 'edit'])->name('editUser')->middleware('isTeacher', 'auth');
+Route::patch('/user/{id}', [UserController::class, 'update'])->name('updateUser')->middleware('isTeacher', 'auth');
 
 //  SHOW
 Route::get('/show/{id}', [UserController::class, 'show'])->name('showUser');
