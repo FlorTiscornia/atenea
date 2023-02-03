@@ -1,21 +1,37 @@
+*{
+    font-family: 'Francois One'!important;
+}
+
 .btn-secondary{
     background-color: #1F363D!important;
-
+    border-color: #1F363D;
+    border-radius: 15px;
 }
 
 #buttonAdd{
     text-decoration: none !important;
 }
 
+.conteiner{
+display: flex;
+justify-content: space-between;
+}
 .studentInfo{
     display: inline-flex;
     flex-wrap: wrap;
     text-decoration: none !important;
     background-color: #70A9A1;
+    border-color: #70A9A1;
+    border-radius: 15px;
 }
 
 #studentTag{
     display: inline-flex;
     flex-wrap: wrap;
     text-decoration: none !important;
+}
+h5{
+    text-align: right;
+    
+    color: #1F363D;
 }
