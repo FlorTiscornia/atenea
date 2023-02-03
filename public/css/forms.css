@@ -1,0 +1,35 @@
+.containerFormStudent{
+    margin: 5% 20% 5% 20%;
+}
+
+.headings{
+    color:#1F363D;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2%;
+}
+
+.createForm{
+    background-color: #70A9A1;
+    padding: 5%;
+    border-radius: 5px;
+    color:white;
+}
+
+.formBottomActions{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+
+.formButton{
+    color: white;
+    background-color:#1F363D;
+    border-radius: 5px;
+    width: 25%;
+    height: 100%;
+    border: none;
+    float: right;
+}

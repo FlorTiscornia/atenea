@@ -9,8 +9,10 @@ function validateEmail(mail){
 }
 
 validation.addEventListener("click",function(){    
-    const mail = emailUser.value; 
-    if(!regularExpr.test(mail))
-    errorEmail.innerHTML ="Error: La dirección de correo " + mail + " es incorrecta."
-    emailUser.classList.add('error');
+    const studentMail = emailUser.value; 
+    if(!regularExpr.test(studentMail)){
+        errorEmail.innerHTML ="Error: La dirección de correo " + mail + " es incorrecta."
+        emailUser.classList.add('error');
+    }
+    
 })

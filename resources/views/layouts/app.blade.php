@@ -23,11 +23,11 @@
     <link href="{{ asset('css\app.css') }}" rel="stylesheet">
     <link href="{{ asset('css\footer.css') }}" rel="stylesheet">
     <link href="{{ asset('css\validation.css') }}" rel="stylesheet">
+    <link href="{{ asset('css\forms.css') }}" rel="stylesheet">
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     <script src="{{ asset('js\validateEmail.js') }}" rel="text/javascript"></script>
-
 </head>
 <body>
     <div id="app">
