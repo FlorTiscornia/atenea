@@ -17,7 +17,7 @@ class CRUDUserTest extends TestCase
      */
     use RefreshDatabase;
 
-    public function test_listUserAppearInHomeView(){
+   /*  public function test_listUserAppearInHomeView(){
         $this->withExceptionHandling();
         $users = User::factory(3)->create();
         $user = $users[0];
@@ -26,7 +26,28 @@ class CRUDUserTest extends TestCase
         $response->assertStatus(200)
                 ->assertViewIs('home');
     }  
-    
+     */
+
+    public function test_listUserAppearInHomeViewByAdmin(){
+        $this->withExceptionHandling();
+
+        $users = User::factory(2)->create();
+        $user = $users[0];
+
+        $userNoAdmin = User::factory()->create(['isAdmin'=>false]);
+        $this->actingAs($userNoAdmin);
+        $response=$this->get(route('showUser', $user->id));
+        $response -> assertSee($user->name);
+        $response ->assertStatus(200)
+                ->assertViewIs('showUser');
+
+        $userAdmin = User::factory()->create(['isAdmin'=>true]);
+        $this->actingAs($userAdmin);
+        $response = $this->get('/');
+        $response -> assertSee($user->name);
+        $response ->assertStatus(200)
+                ->assertViewIs('home');
+    }
     public function test_aUserCanBeDeleted(){
             $this->withExceptionHandling();
             $users = User::factory()->create();
