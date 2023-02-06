@@ -4,9 +4,9 @@ use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\GradeController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\ValidateformController;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,9 +17,6 @@ use App\Http\Controllers\ValidateformController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-
-
 Auth::routes();
 
 Route::redirect('/', 'login');
@@ -44,3 +41,9 @@ Route::get('/showUser/{id}',[UserController::class,'show'])->name('showUser')->m
 
 //Validation
 Route::post('/save', [ValidateformController::class, 'saveDataForm']);
+
+//CRUD GRADES
+
+//R
+Route::get('/home',[GradeController::class,'redirectUsers']);
+Route::get('/homeTeacher',[GradeController::class,'index']);
