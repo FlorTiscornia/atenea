@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -13,6 +13,18 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function redirectUsers(){
+        //si eres profesor, llamas al index; si eres alumno, llamas al show
+        $user = Auth::User();
+        if ($user->isTeacher){
+            return redirect()->route('home');  
+        }
+        if (!$user->isTeacher){
+            return redirect()->route('showUser',$user->id);  
+        }   
+    }
+
     public function index()
     {
         //
