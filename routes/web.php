@@ -23,14 +23,16 @@ Auth::routes();
 
 Route::redirect('/', 'login');
 
-Route::get('/login', [LoginController::class, 'show'])->name('login');
-Route::post('/login', [LoginController::class, 'login']);
+/* Route::get('/login', [LoginController::class, 'show'])->name('login');
+Route::post('/login', [LoginController::class, 'login']); */
 
 
 
 // R del CRUD
-//Route::get('/showUser',[UserController::class,'redirectUsers'])->middleware('auth');
-Route::get('/home', [UserController::class,'index'])->name('home');//->middleware('auth');
+Route::get('/home',[UserController::class,'redirectUsers'])->middleware('auth');
+Route::get('/homeTeacher',[UserController::class,'index'])->name('home')->middleware('auth');
+Route::get('/showUser/{id}',[UserController::class,'show'])->middleware('auth');
+/* Route::get('/home', [UserController::class,'index'])->name('home')->middleware('auth'); */
 
 // D del CRUD
 Route::delete('/delete{id}', [UserController::class, 'destroy'])->name('deleteUser')->middleware('isTeacher', 'auth');
