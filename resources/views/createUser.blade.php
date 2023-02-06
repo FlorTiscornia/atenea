@@ -7,7 +7,7 @@
             <h5>Clase 1ºA</h5>
         </div>
         <div class="createForm">    
-            <form class="justify-content-center " action="{{ route('storeUser') }}" method="post">
+            <form class="justify-content-center" action="{{ route('storeUser') }}" method="post" id="form">
                 @csrf
                 <div class="mb-3">
                     <label for="name" class="form-label">Nombre</label>
@@ -32,7 +32,7 @@
                 <img src="https://res.cloudinary.com/de1i08drf/image/upload/v1675151615/Atenea/flechaAzulIzquierda_ab7yvw.png" alt= "volver a inicio"> 
             </a>
             <input type="reset" name="reset "value="Resetear datos" class="resetButton">
-            <button type="submit" value="saveButton" class="formButton" id="createStudentButton">Añadir estudiante
+            <button type="submit" value="saveButton" class="formButton" id="btnSend">Añadir estudiante
             </button>
         </div>
             </form>

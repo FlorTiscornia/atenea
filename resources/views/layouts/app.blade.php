@@ -27,7 +27,7 @@
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-    <script src="{{ asset('js\validateEmail.js') }}" rel="text/javascript"></script>
+    <script src="{{ asset('js\validateForm.js') }}" rel="text/javascript"></script>
 </head>
 <body>
     <div id="app">

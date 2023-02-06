@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\ValidateformController;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,7 +49,7 @@ Route::get('/show/{id}', [UserController::class, 'show'])->name('showUser');
 
 //Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
-
+Route::post('/save', [ValidateformController::class, 'saveDataForm']);
 
 
 
