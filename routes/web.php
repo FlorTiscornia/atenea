@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\ValidateformController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,4 +40,7 @@ Route::get('/edit/{id}', [UserController::class, 'edit'])->name('editUser')->mid
 Route::patch('/user/{id}', [UserController::class, 'update'])->name('updateUser')->middleware('isTeacher', 'auth');
 
 //  SHOW
-Route::get('/showUser/{id}',[UserController::class,'show'])->name('showUser')->middleware('auth'); 
+Route::get('/showUser/{id}',[UserController::class,'show'])->name('showUser')->middleware('auth');
+
+//Validation
+Route::post('/save', [ValidateformController::class, 'saveDataForm']);
