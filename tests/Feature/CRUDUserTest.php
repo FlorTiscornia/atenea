@@ -32,7 +32,7 @@ class CRUDUserTest extends TestCase
 
         $userTeacher = User::factory()->create(['isTeacher'=>true]);
         $this->actingAs($userTeacher);
-        $response = $this->get('/home');
+        $response = $this->get('/homeTeacher');
         $response -> assertSee($user->name);
         $response ->assertStatus(200)
                 ->assertViewIs('home');
@@ -108,9 +108,9 @@ class CRUDUserTest extends TestCase
 
     public function test_aUserCanBeShowed(){
         $this->withExceptionHandling();
-        $user = User::factory()->create();
-        $this->assertCount(1, User::all());
-        $response = $this->get(route('showUser', $user->id));
+        $user=User::factory()->create();
+        $this->assertCount(1,User::all());
+        $response=$this->get(route('showUser', $user->id));
         $response->assertSee($user->name);
         $response->assertStatus(200)->assertViewIs('showUser');
     }
