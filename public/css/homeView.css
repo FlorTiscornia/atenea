@@ -20,14 +20,18 @@
 
 .conteiner a{
     color: white;
+    border: solid 2px green;
     
 }
 
+#allStudents{
+    border: solid 2px pink;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 #conteinerStudent{
-    display: inline-block;
-    flex-direction: row !important;
-    flex-flow: row wrap;
-    justify-content: space-between;
     margin:2% 10% 0 10%;
     border: solid 2px orange;
     
