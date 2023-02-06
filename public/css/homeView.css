@@ -20,15 +20,15 @@
 
 .conteiner a{
     color: white;
-    border: solid 2px green;
     
 }
 
 #allStudents{
     border: solid 2px pink;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 30% 30% 30% 30% 30%;
+    row-gap: 10px;
 }
 
 #conteinerStudent{
@@ -46,6 +46,7 @@
 
 #studentTag{
     text-decoration: none !important;
+    gap: 5px;
 }    
 
 h5{
