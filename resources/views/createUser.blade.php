@@ -20,7 +20,7 @@
                 <div class="mb-3">
                     <label for="email" class="form-label">Email</label>
                     <input type="email" id="email" name="email" class="form-control" id="email" placeholder="Escribe el email del estudiante">
-                    <p id="errorEmail" class="errorEmail"></p>
+                    <p id="response" class="response"></p>
                 </div>
                 <div class="mb-3">
                     <label for="img" class="form-label">Fotografía</label>
@@ -32,7 +32,7 @@
                 <img src="https://res.cloudinary.com/de1i08drf/image/upload/v1675151615/Atenea/flechaAzulIzquierda_ab7yvw.png" alt= "volver a inicio"> 
             </a>
             <input type="reset" name="reset "value="Resetear datos" class="resetButton">
-            <button type="submit" value="saveButton" class="formButton" id="createStudentButton">Añadir estudiante
+            <button type="submit" class="formButton" id="createStudentButton">Añadir estudiante
             </button>
         </div>
             </form>
