@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Grade;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class GradeController extends Controller
 {
@@ -14,6 +17,9 @@ class GradeController extends Controller
     public function index()
     {
         //
+        $grades = Grade::get();
+        //var_dump($grades);
+        return view('showUser', compact('grades'));
     }
 
     /**

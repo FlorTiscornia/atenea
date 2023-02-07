@@ -17,15 +17,11 @@ class GradeFactory extends Factory
     public function definition()
     {
         return [
-            //
-            'trimester'=>$this->faker->biasedNumberBetween($min = 1, $max= 4, $function = 'sqrt'),,
+            'trimester'=>$this->faker->biasedNumberBetween($min = 1, $max= 4, $function = 'sqrt'),
             'subject'=>fake()->name(),
-            'exam'=>$this->faker->randomFloat($nbMaxDecimals = 2, $min = 1, $max = 5)
-            'year'=>
-            'grade'=>
-            
-    
-        
+            'exam'=>$this->faker->randomFloat($nbMaxDecimals = 2, $min = 1, $max = 3),
+            'year'=>$this->faker->year($max = 'now'),
+            'grade'=>$this->faker->randomFloat($nbMaxDecimals = 2, $min = 1, $max = 10)
         ];
     }
 }
