@@ -20,6 +20,7 @@
     
     <!-- Css -->
     <link href="{{ asset('css\login.css') }}" rel="stylesheet">
+    <link href="{{ asset('css\email.css') }}" rel="stylesheet">
     <link href="{{ asset('css\app.css') }}" rel="stylesheet">
     <link href="{{ asset('css\footer.css') }}" rel="stylesheet">
     <link href="{{ asset('css\homeView.css') }}" rel="stylesheet">

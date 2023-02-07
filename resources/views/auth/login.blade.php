@@ -10,7 +10,7 @@ v1675077884/Atenea/cabezaBuhoAzulSmall_piqqgc.png" style="margin-left: 30px">
             
             <div id="loginCard" >
                 <div id="cardContainer">
-                    <div class="card bg-success p-2 text-dark bg-opacity-25 ">
+                    <div id="cardBackground" class="card bg-success p-2 text-dark bg-opacity-25 ">
                         
                         <div class="card-body ">
                             <form method="POST" action="{{ route('login') }}">
