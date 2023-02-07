@@ -2,7 +2,7 @@
 
 @section('content')
         <div>
-            <img src='{{ ("$user->img") }}' alt='Foto de {{ ("$user->name") }} ' width=10%>   
+            <img id="photoUser" src='{{ ("$user->img") }}' alt='Foto de {{ ("$user->name") }} ' width=10%>   
             <p>{{ ("$user->name") }}</p>
             <p>{{ ("$user->lastname") }}</p>
             <p>{{ ("$user->email") }}</p>
