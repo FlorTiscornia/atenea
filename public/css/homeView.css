@@ -27,11 +27,16 @@
     border: solid 2px pink;
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 30% 30% 30% 30% 30%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
     row-gap: 10px;
+    min-height: 750px;
 }
 
 #conteinerStudent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
     margin:2% 10% 0 10%;
     border: solid 2px orange;
     
@@ -41,7 +46,7 @@
     background-color: #70A9A1;
     border-color: #70A9A1;
     border-radius: 5px;
-    width: 79px;    
+    width: 99px;    
 }
 
 #studentTag{

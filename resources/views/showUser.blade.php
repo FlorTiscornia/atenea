@@ -1,11 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
-        <div>
-            <img id="photoUser" src='{{ ("$user->img") }}' alt='Foto de {{ ("$user->name") }} ' width=10%>   
-            <p>{{ ("$user->name") }}</p>
-            <p>{{ ("$user->lastname") }}</p>
-            <p>{{ ("$user->email") }}</p>
-            <p>{{ ("$user->group") }}</p>
-        </div>   
+
+        <div class="conteinerStudent">
+        <img id="photoUser" src='{{ ("$user->img") }}' alt='Foto de {{ ("$user->name") }} ' width=10%>
+            <div>
+                <div class="row">
+                    <p class="estudents" >Nombre:   {{ ("$user->name") }}</p>
+                    <p>Apellidos: {{ ("$user->lastname") }}</p>
+                    <p>Email:      {{ ("$user->email") }}</p>
+                    <p>Curso:    {{ ("$user->group") }}º </p>
+                    <p>Año: 2023 </p>
+                    <p>Centro: I.E.S Minerva </p>
+                </div>
+            </div>
+        </div>
 @endsection

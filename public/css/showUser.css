@@ -1,8 +1,13 @@
 #photoUser {
     border-radius: 50%;
-    padding: 0 0 0 10px;
 }
-
+.conteinerStudent{
+    margin-left: 10%;
+    display: flex;
+}
+.row{
+    display: table-column;
+}
 p{
     padding-left: 10px;
 }
