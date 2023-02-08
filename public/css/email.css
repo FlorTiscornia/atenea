@@ -1,0 +1,49 @@
+
+@media screen and (max-width: 480px) {
+    /*For mobile phones: */ 
+    #sendBtton{
+        display: flex!important;
+        justify-content: center!important;
+    }
+
+    #emailContainer{
+        background-color: #70A9A1;
+        border: 0;
+        width: max-content!important;
+        font-size: 16px!important;
+    }
+
+    .col-md-8{
+        display: flex!important;
+        justify-content: center!important;
+    }
+    
+}
+.cardContainer{
+    margin-top: 8%;
+    margin-bottom: 8%;
+    color: white;
+    
+}
+
+#emailContainer{
+    background-color: #70A9A1;
+    border: 0;
+    font-size: 1.2vw;
+}
+
+
+#headerBackground{
+    background-color: #1F363D;
+}
+
+#sendBtton{
+    display: flex;
+    justify-content: center;
+}
+
+#sendLink{
+    background-color: #40798C;
+    border: 0;
+    text-decoration: none;
+}
