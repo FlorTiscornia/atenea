@@ -45,4 +45,4 @@ Route::post('/save', [ValidateformController::class, 'saveDataForm']);
 //CRUD GRADES
 
 //R
-Route::get('/home',[GradeController::class,'index'])->name('showUser');
+Route::get('/showUser{idUser}',[GradeController::class,'index'])->name('showUser')->middleware('auth');

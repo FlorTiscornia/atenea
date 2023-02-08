@@ -19,7 +19,7 @@ class GradeController extends Controller
     {
         $users = User::get();
         $grades = Grade::get();
-        return view('home', compact('users', 'grades'));
+        return view('showUser', compact('users', 'grades'));
     }
 
     /**
