@@ -16,4 +16,9 @@ class Grade extends Model
         'year',
         'grade'
     ];
+
+    public function user(){
+        return $this->belongsTo(User::class);
+
+    }
 }

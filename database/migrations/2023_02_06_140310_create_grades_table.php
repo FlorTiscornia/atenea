@@ -16,13 +16,15 @@ return new class extends Migration
         Schema::create('grades', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('idUser');
-            $table->foreign('idUser')->references('id')->on('users')->onDelete("cascade");
+           
             $table->integer('trimester');
             $table->string('subject');
             $table->integer('exam');
             $table->integer('year');
             $table->integer('grade');
             $table->timestamps();
+
+            $table->foreign('idUser')->references('id')->on('users')->onDelete("cascade");
         });
     }
 

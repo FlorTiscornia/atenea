@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-
-       <!--  <div class="conteinerStudent">
+<h1>READ USER GRADE BLADE PHP</h1>
+       <div class="conteinerStudent">
         <img id="photoUser" src='{{ ("$user->img") }}' alt='Foto de {{ ("$user->name") }} ' width=10%>
             <div>
                 <div class="row">
@@ -14,7 +14,7 @@
                     <p>Centro: I.E.S Minerva</p>
                 </div>
             </div>
-        </div> -->
+        </div>
         <div class="accordion" id="accordionPanelsStayOpenExample">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="panelsStayOpen-headingOne">
