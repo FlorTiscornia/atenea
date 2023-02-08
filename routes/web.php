@@ -45,5 +45,4 @@ Route::post('/save', [ValidateformController::class, 'saveDataForm']);
 //CRUD GRADES
 
 //R
-Route::get('/home',[GradeController::class,'redirectUsers']);
-Route::get('/homeTeacher',[GradeController::class,'index']);
+Route::get('/home',[GradeController::class,'index'])->name('showUser');

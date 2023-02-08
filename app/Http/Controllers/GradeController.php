@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Grade;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -18,7 +19,7 @@ class GradeController extends Controller
     {
         //
         $grades = Grade::get();
-        //var_dump($grades);
+
         return view('showUser', compact('grades'));
     }
 
