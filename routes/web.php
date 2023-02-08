@@ -22,8 +22,8 @@ Auth::routes();
 Route::redirect('/', 'login');
 
 // R del CRUD
-Route::get('/readUserGrade',[UserController::class,'redirectUsers'])->middleware('auth');
-Route::get('/homeTeacher',[UserController::class,'index'])->name('home')->middleware('auth');
+Route::get('/home',[UserController::class,'redirectUsers'])->middleware('auth');
+Route::get('/homeTeacher',[UserController::class,'index'])->name('homeTeacher')->middleware('auth');
 
 // D del CRUD
 Route::delete('/delete{id}', [UserController::class, 'destroy'])->name('deleteUser')->middleware('isTeacher', 'auth');
@@ -45,4 +45,3 @@ Route::post('/save', [ValidateformController::class, 'saveDataForm']);
 //CRUD GRADES
 
 //R
-Route::get('/readUserGrade{id}',[GradeController::class,'index'])->name('readUserGrade');

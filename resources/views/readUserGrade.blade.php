@@ -14,6 +14,15 @@
                     <p>Centro: I.E.S Minerva</p>
                 </div>
             </div>
+                 <form action="{{ route('deleteUser', ['id' => $user->id]) }}" method="post">
+                        @method('delete')
+                        @csrf
+                        <div class="d-flex justify-content-end">
+                            <button type="submit" class="btn text-end mt-2" onclick="return confirm('¿Quieres borrar? {{ $user->name }} - ID {{ $user->id }} ')">🗑️
+                            </button>
+                        </div>
+                        <a href="{{ route('editUser', ['id'=>$user->id]) }}">✏️</a>
+                    </form>
         </div>
         <div class="accordion" id="accordionPanelsStayOpenExample">
             <div class="accordion-item">

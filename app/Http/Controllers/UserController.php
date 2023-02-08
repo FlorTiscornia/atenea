@@ -18,7 +18,7 @@ class UserController extends Controller
         //si eres profesor, llamas al index; si eres alumno, llamas al show
         $user = Auth::User();
         if ($user->isTeacher){
-            return redirect()->route('home');  
+            return redirect()->route('homeTeacher');  
         }
         if (!$user->isTeacher){
             return redirect()->route('readUserGrade',$user->id);  
@@ -29,7 +29,7 @@ class UserController extends Controller
     {
         //
         $users = User::where('isTeacher','=', false)->get();
-        return view('home', compact('users'));
+        return view('readUserGrade', compact('users'));
     }
 
     /**
