@@ -1,0 +1,30 @@
+.a{
+    color: black;
+}
+.accordion-button{
+    color: white!important;
+    background-color: #1F363D!important;
+}
+.accordion-body{
+    background-color: #70A9A1!important;
+}
+.row{
+    background-color: white !important;
+    color: #1F363D;
+}
+th{
+    background-color: white !important;
+    border-radius: 15%;
+    margin-left: 5% !important;
+}
+td{
+    background-color: white !important;
+    border-radius: 15%;
+}
+tr{
+    background-color: #70A9A1!important;
+}
+input{
+    background-color: #1F363D!important;
+    color: white;
+}

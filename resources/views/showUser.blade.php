@@ -17,15 +17,15 @@
                     <p>Centro: I.E.S Minerva </p>
             </div>
             <div>
-                <button type="submit" value="saveButton" class="saveButtonForm">Guardar cambios
-                </button>
-            </div>
-            <div>
-                <button type="submit" value="saveButton" class="createButtonForm">Añadir estudiante
-                </button>
-            </div>
-            <div> 
-            <button type="submit" href="{{ route('home') }}" value="saveButton"class="createButtonForm">Resetear Datos</button>
+            <form action="{{ route('deleteUser', ['id' => $user->id]) }}" method="post">
+                @method('delete')
+                @csrf
+                    <div class="d-flex justify-content-end">
+                        <button type="submit" class="btn text-end mt-2" onclick="return confirm('¿Quieres borrar? {{ $user->name }} - ID {{ $user->id }} ')">Borrar Estudiante
+                        </button>
+                    </div>
+                    <a href="{{ route('editUser', ['id'=>$user->id]) }}">Editar Estudiante</a>
+            </form>
             </div>
         </div>
         <div class="accordion" id="accordionPanelsStayOpenExample">
@@ -63,7 +63,7 @@
                         <td>8</td>
                         </tr>
                         <tr>
-                        <th scope="row">Lengua</th>
+                        <th scope="row">Inglés</th>
                         <td>5</td>
                         <td>5</td>
                         <td>10</td>
@@ -203,5 +203,8 @@
                 </div>
             </div>
         </div>
+        <br>
+        Promedio General:<input> 
+        
 
 @endsection

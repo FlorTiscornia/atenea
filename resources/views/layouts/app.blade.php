@@ -24,6 +24,7 @@
     <link href="{{ asset('css\footer.css') }}" rel="stylesheet">
     <link href="{{ asset('css\homeView.css') }}" rel="stylesheet">
     <link href="{{ asset('css\showUser.css') }}" rel="stylesheet">
+    <link href="{{ asset('css\gradeTable.css') }}" rel="stylesheet">
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
