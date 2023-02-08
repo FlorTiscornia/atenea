@@ -16,6 +16,10 @@
 
 }
 
+html {
+    min-height: 100%;
+    position: relative;
+}
 *{
     font-family: 'Francois One'!important;
 }
