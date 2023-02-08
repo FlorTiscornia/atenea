@@ -1,33 +1,73 @@
 *{
     font-family: 'Francois One'!important;
 }
-.a{
-    color: black;
+
+@media screen and (max-width: 480px) {
+    #trimesterHeader{
+        font-size: 16px!important;
+    }
 }
-.accordion-button{
-    color: white!important;
-    background-color: #1F363D!important;
-}
-.accordion-body{
-    background-color: #70A9A1!important;
-}
-.row{
-    background-color: white !important;
-    color: #1F363D;
-}
-th{
-    background-color: white !important;
-    border-radius: 15%;
-    margin-left: 5% !important;
-}
-td{
-    background-color: white !important;
-    border-radius: 15%;
-}
-tr{
-    background-color: #70A9A1!important;
-}
-input{
-    background-color: #1F363D!important;
+/*
+Esta clase tiene la imagen de la flecha para el menú acordeón.
+
+--bs-accordion-btn-icon: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e);
+
+}*/
+
+#trimesterHeader{
     color: white;
+    background-color: #1F363D;
+    font-size: 1.3vw;
+}
+
+#trimesterBody{
+    background-color: #70A9A1
+}
+
+#tableBody{
+    border: 0;
+}
+
+th{
+    border: 0!important;    
+}
+
+td{
+    border: 0!important;   
+    background-color: white!important;
+    border-radius: 10px!important;
+}
+
+#gradesTitle{
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 5%;
+}
+
+#spaceRows{
+    border: 0;
+    margin: 15px!important;
+}
+
+#averageContainer{
+    display: flex;
+    justify-content: center;
+}
+
+#averageCard{
+    background-color: #70A9A1;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 5px 0;
+}
+
+#averageGrade{
+    border-radius: 5px;
+    background-color: #1F363D;
+    color: white;
+    margin: 5% 0;
+    width: 30%;
+    text-align: center;
 }
