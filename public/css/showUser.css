@@ -1,13 +1,24 @@
 #photoUser {
     border-radius: 50%;
+    width: 80px;
+    height: 80px;
 }
 .conteinerStudent{
-    margin-left: 10%;
+    margin-left: 5%;
     display: flex;
+}
+
+.dataContainer2{
+    display: box;
+    width: 50%;
 }
 .row{
     display: table-column;
+
 }
 p{
     padding-left: 10px;
+}
+.buttom{
+    border-radius: 5%;
 }
