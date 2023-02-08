@@ -12,7 +12,10 @@
 body{
     background-color: #EFFCE6 !important;
 }
+.form-control{
+    background-color: white!important;
 
+}
 
 .salute{
     margin-top: 8%;
