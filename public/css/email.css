@@ -1,6 +1,5 @@
 
 @media screen and (max-width: 480px) {
-    /*For mobile phones: */ 
     #sendBtton{
         display: flex!important;
         justify-content: center!important;
@@ -13,13 +12,13 @@
         font-size: 16px!important;
     }
 
-    .col-md-8{
+    .rearrangeLayout{
         display: flex!important;
         justify-content: center!important;
     }
     
 }
-.cardContainer{
+.emailCardContainer{
     margin-top: 8%;
     margin-bottom: 8%;
     color: white;

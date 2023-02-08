@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container cardContainer">
+<div class="container emailCardContainer">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-8 rearrangeLayout">
             <div id="emailContainer" class="card">
                 <div id="headerBackground" class="card-header">{{ __('Restablecer Contraseña') }}</div>
 
