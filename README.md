@@ -87,11 +87,11 @@ To run the tests open terminal and enter the command
 
 
 🧪Next Steps:
-- Add limit of participants to the adoption process
-- Create external email
-- Block access to past adoption processes
-- Add new views
-- Organization of views in Laravel
-- Creation of a selectable Slider
+- 
+- 
+- 
+- 
+- 
+- 
 
 
