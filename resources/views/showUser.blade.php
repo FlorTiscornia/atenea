@@ -17,12 +17,15 @@
                     <p>Centro: I.E.S Minerva </p>
             </div>
             <div>
+                
             <form action="{{ route('deleteUser', ['id' => $user->id]) }}" method="post">
                 @method('delete')
                 @csrf
                     <div class="d-flex justify-content-end">
+                    @if(Auth::check() && Auth::user()->isTeacher)
                         <button type="submit" class="btn text-end mt-2" onclick="return confirm('¿Quieres borrar? {{ $user->name }} - ID {{ $user->id }} ')">Borrar Estudiante
                         </button>
+                    @endif
                     </div>
                     <a href="{{ route('editUser', ['id'=>$user->id]) }}">Editar Estudiante</a>
             </form>
