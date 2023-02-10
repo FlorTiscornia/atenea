@@ -78,22 +78,20 @@ To run the tests open terminal and enter the command
 
 ```
 
-## 📚Methodology:
-<li>Metodología Agile with Scrum</li>
-<li>Mob Programming</li>
-<li>Pair Programming</li>
-<li>TDD</li>
-<li>Patrón de diseño MVC developed with Laravel<li>
+📚Methodology:
+- Methodology Agile with Scrum
+- Mob Programming
+- Pair Programming
+- TDD
+- Desing Pathern MVC developed with Laravel
 
 
-## 🧪Next Steps :
-<li>xxx</li>
-<li>xxx</li>
-<li>xxx</li>
-<li>xxxx</li>
-<li>xxxxx</li>
-<li>xxxxr</li>
-
-
+🧪Next Steps:
+- Add limit of participants to the adoption process
+- Create external email
+- Block access to past adoption processes
+- Add new views
+- Organization of views in Laravel
+- Creation of a selectable Slider
 
 
