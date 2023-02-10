@@ -18,10 +18,12 @@ Esta clase tiene la imagen de la flecha para el menú acordeón.
     color: white;
     background-color: #1F363D;
     font-size: 1.3vw;
+    border-radius: 10px;
 }
 
 #trimesterBody{
-    background-color: #70A9A1
+    background-color: #70A9A1;
+    border-radius: 10px;
 }
 
 #tableBody{

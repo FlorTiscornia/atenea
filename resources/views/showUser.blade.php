@@ -88,6 +88,7 @@
                 </div>
             </div>
         </div>
+        <br>
             <div id="trimesterBody" class="accordion-item">
                 <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
                 <button id="trimesterHeader" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
@@ -146,6 +147,7 @@
                 </div>
             </div>
         </div>
+        <br>
             <div id="trimesterBody" class="accordion-item">
                 <h2 class="accordion-header" id="panelsStayOpen-headingThree">
                 <button id="trimesterHeader" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
