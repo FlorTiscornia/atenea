@@ -17,17 +17,18 @@
                     <p>Centro: I.E.S Minerva </p>
             </div>
             <div>
-                
+            @if(Auth::check() && Auth::user()->isTeacher)    
             <form action="{{ route('deleteUser', ['id' => $user->id]) }}" method="post">
                 @method('delete')
                 @csrf
                     <div class="d-flex justify-content-end">
-                    @if(Auth::check() && Auth::user()->isTeacher)
+                    
                         <button type="submit" class="btn text-end mt-2" onclick="return confirm('¿Quieres borrar? {{ $user->name }} - ID {{ $user->id }} ')">Borrar Estudiante
                         </button>
-                    @endif
+                    
                     </div>
                     <a href="{{ route('editUser', ['id'=>$user->id]) }}">Editar Estudiante</a>
+                    @endif
             </form>
             </div>
         </div>
@@ -218,5 +219,9 @@
                     </div>
             </div>
         </div>
-
+        @if(Auth::check() && Auth::user()->isTeacher)
+        <a class="returnButton"  href="{{ route('home') }}"> 
+            <img src="https://res.cloudinary.com/de1i08drf/image/upload/v1675151615/Atenea/flechaAzulIzquierda_ab7yvw.png" alt= "volver a inicio"> 
+        </a> 
+        @endif
 @endsection
