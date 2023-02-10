@@ -61,5 +61,5 @@ h5{
 
 a:not([class]) {
     text-decoration: none;
-    color: white !important;
+    color: #1F363D !important;
 }
