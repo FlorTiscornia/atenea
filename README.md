@@ -83,7 +83,7 @@ To run the tests open terminal and enter the command
 - Mob Programming
 - Pair Programming
 - TDD
-- Desing Pathern MVC developed with Laravel
+- Software Design Pattern MVC developed with Laravel framework
 
 
 🧪Next Steps:
