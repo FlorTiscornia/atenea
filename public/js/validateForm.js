@@ -1,5 +1,3 @@
-console.log("prueboli");
-
 const btn = document.querySelector("#btnSend");
 const form = document.querySelector("#form");
 btn.addEventListener("click", (e) =>{
