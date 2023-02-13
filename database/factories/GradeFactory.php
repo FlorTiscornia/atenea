@@ -1,7 +1,8 @@
 <?php
 
 namespace Database\Factories;
-
+use App\Models\User;
+use App\Models\Grade;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -16,6 +17,7 @@ class GradeFactory extends Factory
      */
     public function definition()
     {
+        $grades = Grade::all()->random()->idUser;
         return [
             'trimester'=>$this->faker->biasedNumberBetween($min = 1, $max= 4, $function = 'sqrt'),
             'subject'=>fake()->name(),

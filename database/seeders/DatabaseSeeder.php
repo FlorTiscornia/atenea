@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Grade;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -22,6 +23,8 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+
 
         User::factory()->create([
             'name' => 'Elena Mª',
@@ -237,6 +240,24 @@ class DatabaseSeeder extends Seeder
             'group' => 1,
             'isTeacher' => true
         ]);
-        //falta poner imágenes de CLOUDINARY con drag and drop
+
+
+        Grade::factory()->create([
+            'trimester' => 1,
+            'subject' => 'Lengua',
+            'exam' => 1,
+            'year' =>2023,
+            'grade' => 8
+        ]);
+
+        Grade::factory()->create([
+            'trimester' => 1,
+            'subject' => 'Matemáticas',
+            'exam' => 1,
+            'year' =>2023,
+            'grade' => 8
+        ]);
+
+
     }
 }

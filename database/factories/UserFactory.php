@@ -1,7 +1,7 @@
 <?php
 
 namespace Database\Factories;
-
+use App\Models\Grade;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
@@ -25,7 +25,7 @@ class UserFactory extends Factory
             'remember_token' => Str::random(10),
             
             'lastname' => fake()->name(),
-            'img' => fake()->name(),
+            'img' => fake()->imageUrl(),
             'group'=> 1,
             'isTeacher'=>false
         ];
