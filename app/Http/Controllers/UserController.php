@@ -67,8 +67,9 @@ class UserController extends Controller
     {
         //
         $user = User::find($id);
+        $grades = $user->grades();
 
-        return view ('readUserGrade', compact('user'));
+        return view ('readUserGrade', compact('user','grades'));
     }
 
     /**

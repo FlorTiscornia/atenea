@@ -219,9 +219,21 @@
                     </div>
             </div>
         </div>
+        <div>Import grades</div>
+        @foreach($grades as $grade)
+            <div>
+                    <p>Trimestre{{ $grade->trimester}}</p>
+                    <p>Materia{{ $grade->subject}}</p>
+                    <p>Examen {{ $grade->exam}}</p> 
+         
+            </div>
+        @endforeach
+
         @if(Auth::check() && Auth::user()->isTeacher)
         <a class="returnButton"  href="{{ route('home') }}"> 
             <img src="https://res.cloudinary.com/de1i08drf/image/upload/v1675151615/Atenea/flechaAzulIzquierda_ab7yvw.png" alt= "volver a inicio"> 
         </a> 
         @endif
+
+      
 @endsection
