@@ -25,7 +25,6 @@
     <link href="{{ asset('css\footer.css') }}" rel="stylesheet">
     <link href="{{ asset('css\validation.css') }}" rel="stylesheet">
     <link href="{{ asset('css\forms.css') }}" rel="stylesheet">
-
     <link href="{{ asset('css\homeView.css') }}" rel="stylesheet">
     <link href="{{ asset('css\showUser.css') }}" rel="stylesheet">
     <link href="{{ asset('css\gradeTable.css') }}" rel="stylesheet">
@@ -91,13 +90,9 @@
             </div>
         </div>
         <main class="py-4">
-        
             @yield('content')
-    
         </main>
     </div>
-
-    @include('footer')
-
+    @include('layouts.components.footer')
 </body>
 </html>

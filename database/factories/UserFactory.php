@@ -25,9 +25,9 @@ class UserFactory extends Factory
             'remember_token' => Str::random(10),
             
             'lastname' => fake()->name(),
-            'img' => fake()->name(),
+            'img' => fake()->imageUrl(),
             'group'=> 1,
-            'isTeacher'=>false
+            'isTeacher'=>false()->boolean
         ];
     }
 
