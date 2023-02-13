@@ -27,7 +27,7 @@ class UserFactory extends Factory
             'lastname' => fake()->name(),
             'img' => fake()->imageUrl(),
             'group'=> 1,
-            'isTeacher'=>false()->boolean
+            'isTeacher'=>false
         ];
     }
 
