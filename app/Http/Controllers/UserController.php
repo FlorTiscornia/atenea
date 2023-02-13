@@ -29,6 +29,7 @@ class UserController extends Controller
     {
         //
         $users = User::where('isTeacher','=', false)->get();
+        $users = User::orderBy("name")->get();
         return view('home', compact('users'));
     }
 
