@@ -17,27 +17,64 @@ class CRUDUserTest extends TestCase
      */
     use RefreshDatabase;
 
-    public function test_listUserAppearInHomeView(){
+    public function test_listUserAppearInHomeViewByTheTeacher(){
         $this->withExceptionHandling();
-        $users = User::factory(3)->create();
-        $user = $users[0];
-        $response = $this->get('/home');
-        $response->assertSee($user->name);
-        $response->assertStatus(200)
-                ->assertViewIs('home');
-    }  
-    
-    public function test_aUserCanBeDeleted(){
-            $this->withExceptionHandling();
-            $users = User::factory()->create();
-            $this->assertCount(1, User::all());
 
-            $response = $this->delete(route('deleteUser', $users->id));
-            $this->assertCount(0, User::all());
+        $users = User::factory(2)->create();
+        $user = $users[0];
+
+        $userNoTeacher = User::factory()->create(['isTeacher'=>false]);
+        $this->actingAs($userNoTeacher);
+        $response=$this->get(route('showUser', $user->id));
+        $response -> assertSee($user->name);
+        $response ->assertStatus(200)
+                ->assertViewIs('showUser');
+
+        $userTeacher = User::factory()->create(['isTeacher'=>true]);
+        $this->actingAs($userTeacher);
+        $response = $this->get('/homeTeacher');
+        $response -> assertSee($user->name);
+        $response ->assertStatus(200)
+                ->assertViewIs('home');
     }
 
-    public function test_aUserCanBeCreated(){
+    public function test_aUserCanBeDeletedByTheTeacher(){
         $this->withExceptionHandling();
+
+        $user = User::factory()->create();
+        $this->assertCount(1,User::all());
+
+        $userNoTeacher = User::factory()->create(['isTeacher'=>false]);
+        $this->actingAs($userNoTeacher);
+        $response = $this->delete(route('deleteUser',$user->id));
+        $this->assertCount(2,User::all());
+
+        $userTeacher = User::factory()->create(['isTeacher'=>true]);
+        $this->actingAs($userTeacher);
+        $response = $this->delete(route('deleteUser',$user->id));
+        $this->assertCount(2,User::all());
+    }
+
+    public function test_aUserCanBeCreatedByTheTeacher(){
+        $this->withExceptionHandling();
+
+        $userTeacher = User::factory()->create(['isTeacher'=>true]);
+        $this->actingAs($userTeacher);
+        $response = $this->post(route('storeUser'),
+        [
+            'name' => 'name',
+            'email' => 'email',
+            'lastname' => 'lastname',
+            'img' =>'img',
+            'password' => 'password',
+            'group' => 1,
+            'isTeacher' => true,
+        ]);
+        
+        $this->assertCount(2, User::all());
+
+        $userNoTeacher = User::factory()->create(['isTeacher'=>false]);
+        $this->actingAs($userNoTeacher);
         $response = $this->post(route('storeUser'),
         [
             'name' => 'name',
@@ -48,24 +85,33 @@ class CRUDUserTest extends TestCase
             'group' => 1,
             'isTeacher' => false
         ]);
-        $this->assertCount(1, User::all());
+        
+        $this->assertCount(3, User::all());
     }
 
-    public function test_aUserCanBeUpdated(){
+    public function test_aUserCanBeUpdatedByTheTeacher(){
         $this->withExceptionHandling();
+        
+        $user = User::factory()->create();
+        $this->assertCount(1,User::all());
 
-        $users = User::factory()->create();
-        $this->assertCount(1, User::all());
+        $userTeacher = User::factory()->create(['isTeacher' => true]);
+        $this->actingAs($userTeacher);
+        $response = $this->patch(route('updateUser', $user->id), ['name' => 'New Name']);
+        $this->assertEquals('New Name', User::first()->name);
 
-        $response = $this->patch(route('updateUser', $users->id),['name' => 'New Name']);
+        $userNoTeacher = User::factory()->create(['isTeacher' => false]);
+        $this->actingAs($userNoTeacher);
+        $response = $this->patch(route('updateUser', $user->id), ['name' => 'New Name if no Teacher']);
         $this->assertEquals('New Name', User::first()->name);
     }
 
     public function test_aUserCanBeShowed(){
         $this->withExceptionHandling();
-        $user = User::factory()->create();
-        $this->assertCount(1, User::all());
-        $response = $this->get(route('showUser', $user->id));
+        $user=User::factory()->create();
+        $this->assertCount(1,User::all());
+        $this->actingAs($user);
+        $response=$this->get(route('showUser', $user->id));
         $response->assertSee($user->name);
         $response->assertStatus(200)->assertViewIs('showUser');
     }

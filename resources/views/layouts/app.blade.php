@@ -20,10 +20,18 @@
     
     <!-- Css -->
     <link href="{{ asset('css\login.css') }}" rel="stylesheet">
+    <link href="{{ asset('css\email.css') }}" rel="stylesheet">
     <link href="{{ asset('css\app.css') }}" rel="stylesheet">
     <link href="{{ asset('css\footer.css') }}" rel="stylesheet">
+    <link href="{{ asset('css\validation.css') }}" rel="stylesheet">
+    <link href="{{ asset('css\forms.css') }}" rel="stylesheet">
+
+    <link href="{{ asset('css\homeView.css') }}" rel="stylesheet">
+    <link href="{{ asset('css\showUser.css') }}" rel="stylesheet">
+    <link href="{{ asset('css\gradeTable.css') }}" rel="stylesheet">
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    <script src="{{ asset('js\validateForm.js') }}" rel="text/javascript"></script>
 </head>
 <body>
     <div id="app">
@@ -83,7 +91,9 @@
             </div>
         </div>
         <main class="py-4">
+        
             @yield('content')
+    
         </main>
     </div>
 

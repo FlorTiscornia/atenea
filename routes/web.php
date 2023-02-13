@@ -4,8 +4,9 @@ use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\GradeController;
 use App\Http\Controllers\Auth\LoginController;
-
+use App\Http\Controllers\ValidateformController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,39 +17,33 @@ use App\Http\Controllers\Auth\LoginController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-
-
 Auth::routes();
 
 Route::redirect('/', 'login');
 
-Route::get('/login', [LoginController::class, 'show'])->name('login');
-Route::post('/login', [LoginController::class, 'login']);
-
-
-
 // R del CRUD
-Route::get('/home', [UserController::class, 'index'])->name('home');
+Route::get('/home',[UserController::class,'redirectUsers'])->middleware('auth');
+Route::get('/homeTeacher',[UserController::class,'index'])->name('home')->middleware('auth');
 
 // D del CRUD
-Route::delete('/delete{id}', [UserController::class, 'destroy'])->name('deleteUser');
+Route::delete('/delete{id}', [UserController::class, 'destroy'])->name('deleteUser')->middleware('isTeacher', 'auth');
 
 // C del CRUD
-Route::get('/create', [UserController::class, 'create']) ->name('createUser');
-Route::post('/', [UserController::class, 'store']) ->name('storeUser');
+Route::get('/create', [UserController::class, 'create']) ->name('createUser')->middleware('isTeacher', 'auth');
+Route::post('/', [UserController::class, 'store']) ->name('storeUser')->middleware('isTeacher', 'auth');
 
 // U del CRUD
-Route::get('/edit/{id}', [UserController::class, 'edit'])->name('editUser');
-Route::patch('/user/{id}', [UserController::class, 'update'])->name('updateUser');
+Route::get('/edit/{id}', [UserController::class, 'edit'])->name('editUser')->middleware('isTeacher', 'auth');
+Route::patch('/user/{id}', [UserController::class, 'update'])->name('updateUser')->middleware('isTeacher', 'auth');
 
 //  SHOW
-Route::get('/show/{id}', [UserController::class, 'show'])->name('showUser');
+Route::get('/showUser/{id}',[UserController::class,'show'])->name('showUser')->middleware('auth');
 
+//Validation
+Route::post('/save', [ValidateformController::class, 'saveDataForm']);
 
-//Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+//CRUD GRADES
 
-
-
-
-
+//R
+/* Route::get('/home',[GradeController::class,'redirectUsers']);
+Route::get('/homeTeacher',[GradeController::class,'index']); */
