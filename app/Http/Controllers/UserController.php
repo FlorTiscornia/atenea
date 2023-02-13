@@ -27,9 +27,8 @@ class UserController extends Controller
 
     public function index()
     {
-        //
         $users = User::where('isTeacher','=', false)->get();
-        $users = User::orderBy("name")->get();
+        //$users = User::orderBy('name')->get();//
         return view('home', compact('users'));
     }
 
