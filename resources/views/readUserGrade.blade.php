@@ -1,94 +1,227 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>READ USER GRADE BLADE PHP</h1>
-       <div class="conteinerStudent">
-        <img id="photoUser" src='{{ ("$user->img") }}' alt='Foto de {{ ("$user->name") }} ' width=10%>
-            <div>
-                <div class="row">
+
+        <div class="conteinerStudent">
+            <div id="photoContainer">
+                <img id="photoUser" src='{{ ("$user->img") }}' alt='Foto de {{ ("$user->name") }} ' width=10%>
+            </div>
+            <div class="dataContainer">
                     <p class="estudents" >Nombre:   {{ ("$user->name") }}</p>
                     <p>Apellidos: {{ ("$user->lastname") }}</p>
                     <p>Email:      {{ ("$user->email") }}</p>
+            </div>  
+            <div class="dataContainer2">      
                     <p>Curso:    {{ ("$user->group") }}º </p>
                     <p>Año: 2023 </p>
-                    <p>Centro: I.E.S Minerva</p>
-                </div>
+                    <p>Centro: I.E.S Minerva </p>
             </div>
-                 <form action="{{ route('deleteUser', ['id' => $user->id]) }}" method="post">
-                        @method('delete')
-                        @csrf
-                        <div class="d-flex justify-content-end">
-                            <button type="submit" class="btn text-end mt-2" onclick="return confirm('¿Quieres borrar? {{ $user->name }} - ID {{ $user->id }} ')">🗑️
-                            </button>
-                        </div>
-                        <a href="{{ route('editUser', ['id'=>$user->id]) }}">✏️</a>
-                    </form>
+            <div>
+            @if(Auth::check() && Auth::user()->isTeacher)    
+            <form action="{{ route('deleteUser', ['id' => $user->id]) }}" method="post">
+                @method('delete')
+                @csrf
+                    <div class="d-flex justify-content-end">
+                    
+                        <button type="submit" class="btn text-end mt-2" onclick="return confirm('¿Quieres borrar? {{ $user->name }} - ID {{ $user->id }} ')">Borrar Estudiante
+                        </button>
+                    
+                    </div>
+                    <a href="{{ route('editUser', ['id'=>$user->id]) }}">Editar Estudiante</a>
+                    @endif
+            </form>
+            </div>
         </div>
         <div class="accordion" id="accordionPanelsStayOpenExample">
-            <div class="accordion-item">
+            <div  class="accordion-item">
                 <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                <button id="trimesterHeader" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
                     Primer trimestre
                 </button>
                 </h2>
                 <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-                <div class="accordion-body">
+                <div id="trimesterBody" class="accordion-body">
                 <table class="table">
-                    <thead>
-                        <tr>
-                        <th>Lengua</th>
-                        <th>Inglés</th>
-                        <th>Matemáticas</th>
-                        <th>Historia</th> <th>Geografía</th>
+                    <thead id="tableBody">
+                        <tr id="spaceRows">
+                        <th></th>
+                        <th>I</th>
+                        <th>II</th>
+                        <th>III</th> 
+                        <th>Promedio</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                    <tbody id="tableBody">
+                        <tr id="spaceRows">
+                        <th id="gradesTitle" scope="row">Lengua</th>
+                        <td>5</td>
+                        <td>5</td>
+                        <td>10</td>
+                        <td>6.6</td>
                         </tr>
-                        <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
+                        <tr id="spaceRows">
+                        <th id="gradesTitle" scope="row">Matemáticas</th>
+                        <td>8</td>
+                        <td>8</td>
+                        <td>8</td>
+                        <td>8</td>
                         </tr>
-                        <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
+                        <tr id="spaceRows">
+                        <th id="gradesTitle" scope="row">Inglés</th>
+                        <td>5</td>
+                        <td>5</td>
+                        <td>10</td>
+                        <td>6.6</td>
+                        </tr>
+                        <tr id="spaceRows">
+                        <th id="gradesTitle" scope="row">Historia</th>
+                        <td>10</td>
+                        <td>8</td>
+                        <td>10</td>
+                        <td>9.3</td>
+                        </tr>
+                        <tr id="spaceRows">
+                        <th id="gradesTitle" scope="row">Geografía</th>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>4</td>
                         </tr>
                     </tbody>
                     </table>
                 </div>
             </div>
         </div>
-            <div class="accordion-item">
+        <br>
+            <div id="trimesterBody" class="accordion-item">
                 <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                <button id="trimesterHeader" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                     Segundo trimestre
                 </button>
                 </h2>
                 <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
                 <div class="accordion-body">
-                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                        <th></th>
+                        <th>I</th>
+                        <th>II</th>
+                        <th>III</th> 
+                        <th>Promedio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <th id="gradesTitle" scope="row">Lengua</th>
+                        <td>5</td>
+                        <td>5</td>
+                        <td>10</td>
+                        <td>6.6</td>
+                        </tr>
+                        <tr>
+                        <th id="gradesTitle" scope="row">Matemáticas</th>
+                        <td>8</td>
+                        <td>8</td>
+                        <td>8</td>
+                        <td>8</td>
+                        </tr>
+                        <tr>
+                        <th id="gradesTitle" scope="row">Lengua</th>
+                        <td>5</td>
+                        <td>5</td>
+                        <td>10</td>
+                        <td>6.6</td>
+                        </tr>
+                        <th id="gradesTitle" scope="row">Historia</th>
+                        <td>10</td>
+                        <td>8</td>
+                        <td>10</td>
+                        <td>9.3</td>
+                        </tr>
+                        <tr>
+                        <th id="gradesTitle" scope="row">Geografía</th>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>4</td>
+                        </tr>
+                    </tbody>
+                    </table>
                 </div>
             </div>
-            <div class="accordion-item">
+        </div>
+        <br>
+            <div id="trimesterBody" class="accordion-item">
                 <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                <button id="trimesterHeader" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
                     Tercer trimestre
                 </button>
                 </h2>
                 <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
                 <div class="accordion-body">
-                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                        <th></th>
+                        <th>I</th>
+                        <th>II</th>
+                        <th>III</th> 
+                        <th>Promedio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <th id="gradesTitle" scope="row">Lengua</th>
+                        <td>5</td>
+                        <td>5</td>
+                        <td>10</td>
+                        <td>6.6</td>
+                        </tr>
+                        <tr>
+                        <th id="gradesTitle" scope="row">Matemáticas</th>
+                        <td>8</td>
+                        <td>8</td>
+                        <td>8</td>
+                        <td>8</td>
+                        </tr>
+                        <tr>
+                        <th id="gradesTitle" scope="row">Lengua</th>
+                        <td>5</td>
+                        <td>5</td>
+                        <td>10</td>
+                        <td>6.6</td>
+                        </tr>
+                        <th id="gradesTitle" scope="row">Historia</th>
+                        <td>10</td>
+                        <td>8</td>
+                        <td>10</td>
+                        <td>9.3</td>
+                        </tr>
+                        <tr>
+                        <th id="gradesTitle" scope="row">Geografía</th>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>4</td>
+                        </tr>
+                    </tbody>
+                    </table>
                 </div>
             </div>
+        </div>
+        <br>
+        <div id="averageContainer">
+            <div id="averageCard">
+                Promedio General:
+                    <div>
+                        <input id="averageGrade"> 
+                    </div>
             </div>
-
+        </div>
+        @if(Auth::check() && Auth::user()->isTeacher)
+        <a class="returnButton"  href="{{ route('home') }}"> 
+            <img src="https://res.cloudinary.com/de1i08drf/image/upload/v1675151615/Atenea/flechaAzulIzquierda_ab7yvw.png" alt= "volver a inicio"> 
+        </a> 
+        @endif
 @endsection
