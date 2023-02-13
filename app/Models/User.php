@@ -48,6 +48,6 @@ class User extends Authenticatable
     ];
 
     public function grades(){
-        return $this->hasMany(Grade::class/*,  'idUser', 'id' */);
+        return $this->hasMany(Grade::class,  'idUser', 'id');
     }
 }
