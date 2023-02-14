@@ -15,7 +15,8 @@ class Grade extends Model
         'subject',
         'exam',
         'year',
-        'grade'
+        'grade',
+        'idUser'
     ];
 
     public function user(){

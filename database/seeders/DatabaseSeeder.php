@@ -252,12 +252,35 @@ class DatabaseSeeder extends Seeder
 
         Grade::factory()->create([
             'trimester' => 1,
+            'subject' => 'Inglés',
+            'exam' => 1,
+            'year' =>2023,
+            'grade' => 2
+        ]);
+
+        Grade::factory()->create([
+            'trimester' => 1,
             'subject' => 'Matemáticas',
             'exam' => 1,
             'year' =>2023,
-            'grade' => 8
+            'grade' => 4
         ]);
 
+        Grade::factory()->create([
+            'trimester' => 1,
+            'subject' => 'Historia',
+            'exam' => 1,
+            'year' =>2023,
+            'grade' => 9
+        ]);
+
+        Grade::factory()->create([
+            'trimester' => 1,
+            'subject' => 'Geografía',
+            'exam' => 1,
+            'year' =>2023,
+            'grade' => 5
+        ]);
 
     }
 }
