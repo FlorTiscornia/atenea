@@ -247,7 +247,8 @@ class DatabaseSeeder extends Seeder
             'subject' => 'Lengua',
             'exam' => 1,
             'year' =>2023,
-            'grade' => 8
+            'grade' => 8,
+            'idUser' => 1
         ]);
 
         Grade::factory()->create([
@@ -255,7 +256,8 @@ class DatabaseSeeder extends Seeder
             'subject' => 'Inglés',
             'exam' => 1,
             'year' =>2023,
-            'grade' => 2
+            'grade' => 2,
+            'idUser' => 1
         ]);
 
         Grade::factory()->create([
@@ -263,7 +265,8 @@ class DatabaseSeeder extends Seeder
             'subject' => 'Matemáticas',
             'exam' => 1,
             'year' =>2023,
-            'grade' => 4
+            'grade' => 4,
+            'idUser' => 1
         ]);
 
         Grade::factory()->create([
@@ -271,7 +274,8 @@ class DatabaseSeeder extends Seeder
             'subject' => 'Historia',
             'exam' => 1,
             'year' =>2023,
-            'grade' => 9
+            'grade' => 9,
+            'idUser' => 1
         ]);
 
         Grade::factory()->create([
@@ -279,7 +283,8 @@ class DatabaseSeeder extends Seeder
             'subject' => 'Geografía',
             'exam' => 1,
             'year' =>2023,
-            'grade' => 5
+            'grade' => 5,
+            'idUser' => 1
         ]);
 
     }

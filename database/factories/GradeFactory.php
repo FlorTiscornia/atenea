@@ -24,7 +24,7 @@ class GradeFactory extends Factory
             'exam' => $this->faker->randomFloat($nbMaxDecimals = 2, $min = 1, $max = 3),
             'year' => $this->faker->year($max = 'now'),
             'grade' => $this->faker->randomFloat($nbMaxDecimals = 2, $min = 1, $max = 10),
-            'idUser' => $grades,
+            'idUser' => $grades
         ];
     }
 }
