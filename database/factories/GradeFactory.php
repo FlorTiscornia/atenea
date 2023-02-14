@@ -17,13 +17,14 @@ class GradeFactory extends Factory
      */
     public function definition()
     {
-        $grades = Grade::all()->random()->idUser;
+        $grades = User::all()->random()->id;
         return [
-            'trimester'=>$this->faker->biasedNumberBetween($min = 1, $max= 4, $function = 'sqrt'),
-            'subject'=>fake()->name(),
-            'exam'=>$this->faker->randomFloat($nbMaxDecimals = 2, $min = 1, $max = 3),
-            'year'=>$this->faker->year($max = 'now'),
-            'grade'=>$this->faker->randomFloat($nbMaxDecimals = 2, $min = 1, $max = 10)
+            'trimester' => $this->faker->biasedNumberBetween($min = 1, $max = 4, $function = 'sqrt'),
+            'subject' => $this->faker->name(),
+            'exam' => $this->faker->randomFloat($nbMaxDecimals = 2, $min = 1, $max = 3),
+            'year' => $this->faker->year($max = 'now'),
+            'grade' => $this->faker->randomFloat($nbMaxDecimals = 2, $min = 1, $max = 10),
+            'idUser' => $grades,
         ];
     }
 }
