@@ -224,6 +224,10 @@
             </div>
         </div>
         @foreach($grades as $grade)
+        <div>
+            <p>{{$grade->grade}}</p>
+            <p>{{$grade->idUser}}</p>
+        </div>
             <div>
                     <p>Trimestre{{ $grade->trimester}}</p>
                     <p>Materia:{{ $grade->subject}}</p>

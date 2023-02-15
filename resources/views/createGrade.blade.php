@@ -9,6 +9,10 @@
         <div class="createForm">    
             <form class="justify-content-center" action="{{ route('storeGrade') }}" method="post" id="form">
                 @csrf
+                <div>
+                <label for="users" class="form-label">Estudiante</label>
+                <select name="select"> <option value="{{$ users->id}}}">{{$users->id}}</option></select>
+                </div>
                 <div class="mb-3">
                     <label for="trimester" class="form-label">Trimestre</label>
                     <input type="text" name="trimester" class="form-control" id="trimester" placeholder="Escribe el trimestre">

@@ -17,9 +17,9 @@ class GradeController extends Controller
      */
     public function index()
     {
-        $users = User::get();
-/*         $grades = Grade::get();
- */        return view('readUserGrade', compact('users'));
+        /* $users = User::get(); */
+        $grades = Grade::get();
+        return view('readUserGrade', compact('users'));
     }
 
     /**
@@ -30,6 +30,9 @@ class GradeController extends Controller
     public function create()
     {
         //
+        $grade = new Grade();
+        $users = User::pluck('name', 'id');
+        return view('createGrade', compact('grade', 'users'));
     }
 
     /**
