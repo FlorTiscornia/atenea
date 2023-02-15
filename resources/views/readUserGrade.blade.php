@@ -231,6 +231,23 @@
                     <p>Año: {{ $grade->year}}</p>
                     <p>Calificación: {{ $grade->grade}}</p>         
             </div>
+
+            <div>
+            @if(Auth::check() && Auth::user()->isTeacher)    
+            <form action="{{ route('deleteGrade', ['id' => $grade->id]) }}" method="post">
+                @method('delete')
+                @csrf
+                    <div class="d-flex justify-content-end">
+                    
+                        <button type="submit" class="btn text-end mt-2" onclick="return confirm('¿Quieres borrar esta nota? {{ $grade->subject }} - ID {{ $grade->id }} ')">Borrar nota
+                        </button>
+                    
+                    </div>
+                    <a href="{{ route('editGrade', ['id'=>$grade->id]) }}">Editar nota</a>
+                    @endif
+            </form>
+            </div>
+
         @endforeach
 
         @if(Auth::check() && Auth::user()->isTeacher)

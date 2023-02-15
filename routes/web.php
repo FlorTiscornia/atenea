@@ -45,3 +45,13 @@ Route::post('/save', [ValidateformController::class, 'saveDataForm']);
 //CRUD GRADES
 
 //R
+
+
+//C
+Route::get('/create', [GradeController::class, 'create']) ->name('createGrade')->middleware('isTeacher', 'auth');
+Route::post('/', [GradeController::class, 'store']) ->name('storeGrade')->middleware('isTeacher', 'auth');
+
+//U
+Route::get('/edit/{id}', [GradeController::class, 'edit'])->name('editGrade')->middleware('isTeacher', 'auth');
+Route::patch('/user/{id}', [GradeController::class, 'update'])->name('updateGrade')->middleware('isTeacher', 'auth');
+
