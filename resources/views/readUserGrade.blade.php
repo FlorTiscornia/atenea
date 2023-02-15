@@ -1,34 +1,36 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="conteinerStudent">
 
-        <div class="conteinerStudent">
-            <div id="photoContainer">
-                <img id="photoUser" src='{{ ("$user->img") }}' alt='Foto de {{ ("$user->name") }} ' width=10%>
-            </div>
-            <div class="dataContainer">
-                    <p class="estudents" >Nombre:   {{ ("$user->name") }}</p>
-                    <p>Apellidos: {{ ("$user->lastname") }}</p>
-                    <p>Email:      {{ ("$user->email") }}</p>
-            </div>  
-            <div class="dataContainer2">      
-                    <p>Curso:    {{ ("$user->group") }}º </p>
-                    <p>Año: 2023 </p>
-                    <p>Centro: I.E.S Minerva </p>
-            </div>
-            <div>
-            @if(Auth::check() && Auth::user()->isTeacher)    
-            <form action="{{ route('deleteUser', ['id' => $user->id]) }}" method="post">
-                @method('delete')
-                @csrf
+        <div id="photoContainer">
+            <img id="photoUser" src='{{ $user->img }}' alt='Foto de {{ $user->name }}' width="10%" />
+        </div>
+
+        <div class="dataContainer">
+            <p class="estudents">Nombre: {{ $user->name }}</p>
+            <p>Apellidos: {{ $user->lastname }}</p>
+            <p>Email: {{ $user->email }}</p>
+        </div>
+
+        <div class="dataContainer2">
+            <p>Curso: {{ $user->group }}º</p>
+            <p>Año: 2023</p>
+            <p>Centro: I.E.S Minerva</p>
+        </div>
+
+        <div>
+            @if(Auth::check() && Auth::user()->isTeacher)
+                <form action="{{ route('deleteUser', ['id' => $user->id]) }}" method="post">
+                    @method('delete')
+                    @csrf
                     <div class="d-flex justify-content-end">
-                    
-                        <button type="submit" class="btn text-end mt-2" onclick="return confirm('¿Quieres borrar? {{ $user->name }} - ID {{ $user->id }} ')">Borrar Estudiante
-                        </button>
-                    
+                        <button type="submit" class="btn text-end mt-2" onclick="return confirm('¿Quieres borrar? {{ $user->name }} - ID {{ $user->id }}')">Borrar Estudiante</button>
                     </div>
-                    <a href="{{ route('editUser', ['id'=>$user->id]) }}">Editar Estudiante</a>
-                    @endif
+                </form>
+                <a href="{{ route('editUser', ['id'=>$user->id]) }}">Editar Estudiante</a>
+            @endif
+        </div>
             </form>
             </div>
         </div>

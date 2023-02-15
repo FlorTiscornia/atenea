@@ -23,7 +23,7 @@ return new class extends Migration
             $table->rememberToken();
 
             $table-> string ('lastname', 150);
-            $table-> string ('img');
+            $table-> string ('img')->nullable();
             $table-> integer ('group')->default(1);
             $table-> boolean ('isTeacher')->default (false);
 

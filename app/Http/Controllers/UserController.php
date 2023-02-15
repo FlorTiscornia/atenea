@@ -18,7 +18,7 @@ class UserController extends Controller
         //si eres profesor, llamas al index; si eres alumno, llamas al show
         $user = Auth::User();
         if ($user->isTeacher){
-            return redirect()->route('homeTeacher');  
+            return redirect()->route('home');  
         }
         if (!$user->isTeacher){
             return redirect()->route('readUserGrade',$user->id);  
@@ -28,8 +28,8 @@ class UserController extends Controller
     public function index()
     {
         //
-        $users = User::where('isTeacher','=', false)->get();
-        return view('readUserGrade', compact('users'));
+        $user = User::where('isTeacher','=', false)->get();
+        return view('readUserGrade', compact('user'));
     }
 
     /**
@@ -69,7 +69,7 @@ class UserController extends Controller
         $user = User::find($id);
         $grades = $user->grades;
 
-        return view ('readUserGrade', compact('user','grades'));
+        return view ('readUserGrade', compact('users','grades'));
     }
 
     /**

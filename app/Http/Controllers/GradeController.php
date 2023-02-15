@@ -17,9 +17,9 @@ class GradeController extends Controller
      */
     public function index()
     {
-        /* $users = User::get(); */
         $grades = Grade::get();
-        return view('readUserGrade', compact('users', 'grades'));
+   /*      $user = User::get(); */
+        return view('readUserGrade', compact('user', 'grade'));
     }
 
     /**
@@ -31,8 +31,8 @@ class GradeController extends Controller
     {
         //
         $grade = new Grade();
-        $users = User::pluck('name', 'id');
-        return view('createGrade', compact('grade', 'users'));
+        $user = User::pluck('name', 'id');
+        return view('createGrade', compact('grade', 'user'));
     }
 
     /**
@@ -44,6 +44,9 @@ class GradeController extends Controller
     public function store(Request $request)
     {
         //
+        $grade = request()->except('_token');
+        Grade::create($grade);
+        return redirect()->route('readUserGrade');
     }
 
     /**
@@ -55,6 +58,8 @@ class GradeController extends Controller
     public function show($id)
     {
         //
+        $grade = Grade::find($id);
+        return view ('readUserGrade', compact('grade'));
     }
 
     /**
@@ -66,8 +71,9 @@ class GradeController extends Controller
     public function edit($id)
     {
         //
+        $grades = Grade::find($id);
+        return view ('editGrade', compact('grade'));
     }
-
     /**
      * Update the specified resource in storage.
      *
@@ -78,8 +84,10 @@ class GradeController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $grades = request()->except('_token','_method');
+        Grade:: where('id', '=', $id)->update($grades);
+        return redirect()->route('readUserGrade');
     }
-
     /**
      * Remove the specified resource from storage.
      *
@@ -89,5 +97,7 @@ class GradeController extends Controller
     public function destroy($id)
     {
         //
+        Grade::destroy($id);
+        return redirect()->route('readUserGrade');
     }
 }

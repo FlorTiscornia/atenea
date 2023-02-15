@@ -24,7 +24,7 @@ Route::redirect('/', 'login');
 
 // R del CRUD
 Route::get('/home',[UserController::class,'redirectUsers'])->middleware('auth');
-Route::get('/homeTeacher',[UserController::class,'index'])->name('homeTeacher')->middleware('auth');
+Route::get('/homeTeacher',[UserController::class,'index'])->name('home')->middleware('auth');
 
 // D del CRUD
 Route::delete('/delete{id}', [UserController::class, 'destroy'])->name('deleteUser')->middleware('isTeacher', 'auth');
@@ -54,5 +54,9 @@ Route::post('/', [GradeController::class, 'store']) ->name('storeGrade')->middle
 
 //U
 Route::get('/edit/{id}', [GradeController::class, 'edit'])->name('editGrade')->middleware('isTeacher', 'auth');
-Route::patch('/user/{id}', [GradeController::class, 'update'])->name('updateGrade')->middleware('isTeacher', 'auth');
+Route::patch('/grade/{id}', [GradeController::class, 'update'])->name('updateGrade')->middleware('isTeacher', 'auth');
+
+// D del CRUD
+Route::delete('/delete{id}', [GradeController::class, 'destroy'])->name('deleteGrade')->middleware('isTeacher', 'auth');
+
 
