@@ -620,7 +620,7 @@ class DatabaseSeeder extends Seeder
             'subject' => 'Inglés',
             'exam' => 1,
             'year' =>2023,
-            'grade' => 2,
+            'grade' => 8,
             'idUser' => 3
         ]);
 

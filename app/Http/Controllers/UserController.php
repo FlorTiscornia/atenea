@@ -18,7 +18,7 @@ class UserController extends Controller
         //si eres profesor, llamas al index; si eres alumno, llamas al show
         $user = Auth::User();
         if ($user->isTeacher){
-            return redirect()->route('homeTeacher');  
+            return redirect()->route('home');  
         }
         if (!$user->isTeacher){
             return redirect()->route('readUserGrade',$user->id);  
