@@ -68,9 +68,17 @@ class UserController extends Controller
         //
         $user = User::find($id);
         $grades = $user->grades;
+        
+        $trimesterGrades = [];
+        foreach ($grades as $grade) {
+            $trimesterGrades[$grade->trimester][$grade->subject][] = $grade->grade;
+        }
+        
 
-        return view ('readUserGrade', compact('user','grades'));
+        return view ('readUserGrade', compact('user','grades', 'trimesterGrades'));
     }
+
+
 
     /**
      * Show the form for editing the specified resource.
