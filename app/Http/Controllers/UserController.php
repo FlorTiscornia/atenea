@@ -29,7 +29,7 @@ class UserController extends Controller
     {
         //
         $users = User::where('isTeacher','=', false)->get();
-        return view('readUserGrade', compact('users'));
+        return view('home', compact('users'));
     }
 
     /**
