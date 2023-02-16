@@ -23,7 +23,7 @@ Route::redirect('/', 'login');
 
 // R del CRUD
 Route::get('/home',[UserController::class,'redirectUsers'])->middleware('auth');
-Route::get('/homeTeacher',[UserController::class,'index'])->name('homeTeacher')->middleware('isTeacher', 'auth');
+Route::get('/homeTeacher',[UserController::class,'index'])->name('home')->middleware('isTeacher', 'auth');
 
 // D del CRUD
 Route::delete('/delete{id}', [UserController::class, 'destroy'])->name('deleteUser')->middleware('isTeacher', 'auth');
