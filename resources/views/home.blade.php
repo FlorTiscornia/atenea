@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>HOME TEACHER</h1>
+
     <div class="conteiner">
         <button class="btn-secondary">
             <a id="buttonAdd" href="{{ route('createUser') }}">

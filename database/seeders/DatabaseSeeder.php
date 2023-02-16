@@ -328,7 +328,7 @@ class DatabaseSeeder extends Seeder
         Grade::factory()->create([
             'trimester' => 1,
             'subject' => 'Historia',
-            'exam' => 1,
+            'exam' => 2,
             'year' =>2023,
             'grade' => 9,
             'idUser' => 1
@@ -336,7 +336,7 @@ class DatabaseSeeder extends Seeder
         Grade::factory()->create([
             'trimester' => 1,
             'subject' => 'Historia',
-            'exam' => 2,
+            'exam' => 3,
             'year' =>2023,
             'grade' => 15,
             'idUser' => 1
@@ -366,14 +366,7 @@ class DatabaseSeeder extends Seeder
             'grade' => 15,
             'idUser' => 1
         ]);
-        Grade::factory()->create([
-            'trimester' => 1,
-            'subject' => 'Geografía',
-            'exam' => 3,
-            'year' =>2023,
-            'grade' => 15,
-            'idUser' => 4
-        ]);
+
         Grade::factory()->create([
             'trimester' => 1,
             'subject' => 'Lengua',
@@ -405,7 +398,7 @@ class DatabaseSeeder extends Seeder
             'exam' => 1,
             'year' =>2023,
             'grade' => 10,
-            'idUser' => 4
+            'idUser' => 2
         ]);
 
         Grade::factory()->create([
@@ -414,7 +407,7 @@ class DatabaseSeeder extends Seeder
             'exam' => 2,
             'year' =>2023,
             'grade' => 10,
-            'idUser' => 4
+            'idUser' => 2
         ]);
         Grade::factory()->create([
             'trimester' => 1,
@@ -422,7 +415,7 @@ class DatabaseSeeder extends Seeder
             'exam' => 3,
             'year' =>2023,
             'grade' => 10,
-            'idUser' => 4
+            'idUser' => 2
         ]);
         Grade::factory()->create([
             'trimester' => 1,
@@ -430,7 +423,7 @@ class DatabaseSeeder extends Seeder
             'exam' => 1,
             'year' =>2023,
             'grade' => 10,
-            'idUser' => 4
+            'idUser' => 2
         ]);
         Grade::factory()->create([
             'trimester' => 1,
@@ -438,7 +431,7 @@ class DatabaseSeeder extends Seeder
             'exam' => 2,
             'year' =>2023,
             'grade' => 10,
-            'idUser' => 4
+            'idUser' => 2
         ]);
         Grade::factory()->create([
             'trimester' => 1,
@@ -446,7 +439,7 @@ class DatabaseSeeder extends Seeder
             'exam' => 3,
             'year' =>2023,
             'grade' => 10,
-            'idUser' => 4
+            'idUser' => 2
         ]);
 
         Grade::factory()->create([
@@ -455,15 +448,7 @@ class DatabaseSeeder extends Seeder
             'exam' => 1,
             'year' =>2023,
             'grade' => 10,
-            'idUser' => 4
-        ]);
-        Grade::factory()->create([
-            'trimester' => 1,
-            'subject' => 'Historia',
-            'exam' => 1,
-            'year' =>2023,
-            'grade' => 10,
-            'idUser' => 4
+            'idUser' => 2
         ]);
         Grade::factory()->create([
             'trimester' => 1,
@@ -471,7 +456,15 @@ class DatabaseSeeder extends Seeder
             'exam' => 2,
             'year' =>2023,
             'grade' => 10,
-            'idUser' => 4
+            'idUser' => 2
+        ]);
+        Grade::factory()->create([
+            'trimester' => 1,
+            'subject' => 'Historia',
+            'exam' => 3,
+            'year' =>2023,
+            'grade' => 10,
+            'idUser' => 2
         ]);
 
         Grade::factory()->create([
@@ -480,7 +473,7 @@ class DatabaseSeeder extends Seeder
             'exam' => 1,
             'year' =>2023,
             'grade' => 10,
-            'idUser' => 4
+            'idUser' => 2
         ]);
         Grade::factory()->create([
             'trimester' => 1,
@@ -488,7 +481,7 @@ class DatabaseSeeder extends Seeder
             'exam' => 2,
             'year' =>2023,
             'grade' => 10,
-            'idUser' => 4
+            'idUser' => 2
         ]);
         Grade::factory()->create([
             'trimester' => 1,
@@ -496,7 +489,98 @@ class DatabaseSeeder extends Seeder
             'exam' => 3,
             'year' =>2023,
             'grade' => 10,
-            'idUser' => 4
+            'idUser' => 2
+        ]);
+        Grade::factory()->create([
+            'trimester' => 1,
+            'subject' => 'Inglés',
+            'exam' => 1,
+            'year' =>2023,
+            'grade' => 10,
+            'idUser' => 2
+        ]);
+
+        Grade::factory()->create([
+            'trimester' => 1,
+            'subject' => 'Inglés',
+            'exam' => 2,
+            'year' =>2023,
+            'grade' => 10,
+            'idUser' => 2
+        ]);
+        Grade::factory()->create([
+            'trimester' => 1,
+            'subject' => 'Inglés',
+            'exam' => 3,
+            'year' =>2023,
+            'grade' => 10,
+            'idUser' => 2
+        ]);
+        Grade::factory()->create([
+            'trimester' => 1,
+            'subject' => 'Matemáticas',
+            'exam' => 1,
+            'year' =>2023,
+            'grade' => 10,
+            'idUser' => 2
+        ]);
+        Grade::factory()->create([
+            'trimester' => 1,
+            'subject' => 'Matemáticas',
+            'exam' => 2,
+            'year' =>2023,
+            'grade' => 10,
+            'idUser' => 2
+        ]);
+        Grade::factory()->create([
+            'trimester' => 1,
+            'subject' => 'Matemáticas',
+            'exam' => 3,
+            'year' =>2023,
+            'grade' => 10,
+            'idUser' => 2
+        ]);
+
+        Grade::factory()->create([
+            'trimester' => 1,
+            'subject' => 'Historia',
+            'exam' => 1,
+            'year' =>2023,
+            'grade' => 10,
+            'idUser' => 2
+        ]);
+        Grade::factory()->create([
+            'trimester' => 1,
+            'subject' => 'Historia',
+            'exam' => 2,
+            'year' =>2023,
+            'grade' => 10,
+            'idUser' => 2
+        ]);
+        Grade::factory()->create([
+            'trimester' => 1,
+            'subject' => 'Historia',
+            'exam' => 3,
+            'year' =>2023,
+            'grade' => 10,
+            'idUser' => 2
+        ]);
+
+        Grade::factory()->create([
+            'trimester' => 1,
+            'subject' => 'Geografía',
+            'exam' => 1,
+            'year' =>2023,
+            'grade' => 10,
+            'idUser' => 2
+        ]);
+        Grade::factory()->create([
+            'trimester' => 1,
+            'subject' => 'Geografía',
+            'exam' => 2,
+            'year' =>2023,
+            'grade' => 10,
+            'idUser' => 2
         ]);
         Grade::factory()->create([
             'trimester' => 1,
@@ -504,7 +588,132 @@ class DatabaseSeeder extends Seeder
             'exam' => 3,
             'year' =>2023,
             'grade' => 10,
-            'idUser' => 4
+            'idUser' => 2
         ]);
+        Grade::factory()->create([
+            'trimester' => 1,
+            'subject' => 'Lengua',
+            'exam' => 1,
+            'year' =>2023,
+            'grade' => 8,
+            'idUser' => 3
+        ]);
+        Grade::factory()->create([
+            'trimester' => 1,
+            'subject' => 'Lengua',
+            'exam' => 2,
+            'year' =>2023,
+            'grade' => 8,
+            'idUser' => 3
+        ]);
+        Grade::factory()->create([
+            'trimester' => 1,
+            'subject' => 'Lengua',
+            'exam' => 3,
+            'year' =>2023,
+            'grade' => 8,
+            'idUser' => 3
+        ]);
+
+        Grade::factory()->create([
+            'trimester' => 1,
+            'subject' => 'Inglés',
+            'exam' => 1,
+            'year' =>2023,
+            'grade' => 2,
+            'idUser' => 3
+        ]);
+
+        Grade::factory()->create([
+            'trimester' => 1,
+            'subject' => 'Inglés',
+            'exam' => 2,
+            'year' =>2023,
+            'grade' => 8,
+            'idUser' => 3
+        ]);
+        Grade::factory()->create([
+            'trimester' => 1,
+            'subject' => 'Inglés',
+            'exam' => 3,
+            'year' =>2023,
+            'grade' => 8,
+            'idUser' => 3
+        ]);
+        Grade::factory()->create([
+            'trimester' => 1,
+            'subject' => 'Matemáticas',
+            'exam' => 1,
+            'year' =>2023,
+            'grade' => 8,
+            'idUser' => 3
+        ]);
+        Grade::factory()->create([
+            'trimester' => 1,
+            'subject' => 'Matemáticas',
+            'exam' => 2,
+            'year' =>2023,
+            'grade' => 8,
+            'idUser' => 3
+        ]);
+        Grade::factory()->create([
+            'trimester' => 1,
+            'subject' => 'Matemáticas',
+            'exam' => 3,
+            'year' =>2023,
+            'grade' => 8,
+            'idUser' => 3
+        ]);
+
+        Grade::factory()->create([
+            'trimester' => 1,
+            'subject' => 'Historia',
+            'exam' => 1,
+            'year' =>2023,
+            'grade' => 8,
+            'idUser' => 3
+        ]);
+        Grade::factory()->create([
+            'trimester' => 1,
+            'subject' => 'Historia',
+            'exam' => 2,
+            'year' =>2023,
+            'grade' => 8,
+            'idUser' => 3
+        ]);
+        Grade::factory()->create([
+            'trimester' => 1,
+            'subject' => 'Historia',
+            'exam' => 3,
+            'year' =>2023,
+            'grade' => 8,
+            'idUser' => 3
+        ]);
+
+        Grade::factory()->create([
+            'trimester' => 1,
+            'subject' => 'Geografía',
+            'exam' => 1,
+            'year' =>2023,
+            'grade' => 8,
+            'idUser' => 3
+        ]);
+        Grade::factory()->create([
+            'trimester' => 1,
+            'subject' => 'Geografía',
+            'exam' => 2,
+            'year' =>2023,
+            'grade' => 8,
+            'idUser' => 3
+        ]);
+        Grade::factory()->create([
+            'trimester' => 1,
+            'subject' => 'Geografía',
+            'exam' => 3,
+            'year' =>2023,
+            'grade' => 8,
+            'idUser' => 3
+        ]);
+
     }
 }
