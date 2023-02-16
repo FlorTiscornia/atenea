@@ -32,73 +32,184 @@
             </form>
             </div>
         </div>
-        <div>
-        @foreach($trimesterGrades as $key => $trimesterGrade)
-            <div class="accordion" id="accordionPanelsStayOpenExample">
-                <div  class="accordion-item">
-                    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                    <button id="trimesterHeader" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                    {{ $key }}º trimestre
-                    </button>
-                    </h2>
-                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-                    <div id="trimesterBody" class="accordion-body">
-                    <table class="table">
-                        <thead id="tableBody">
-                            <tr id="spaceRows">
-                            <th></th>
-                            <th>I</th>
-                            <th>II</th>
-                            <th>III</th> 
-                            <th>Promedio</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tableBody">
-                            <tr id="spaceRows">
-                            <th id="gradesTitle" scope="row">Inglés</th>
-                                @foreach($trimesterGrade['Inglés'] as $inglesGrade)
-                                    <td>{{ $inglesGrade }}</td>
-                                @endforeach
-                            <td>6.6</td>
-                            </tr>
-                            <tr id="spaceRows">
-                            <th id="gradesTitle" scope="row">Matemáticas</th>
-                                @foreach($trimesterGrade['Matemáticas'] as $matematicasGrade)
-                                    <td>{{ $matematicasGrade }}</td>
-                                @endforeach
-                            <td>8</td>
-                            </tr>
-                            <tr id="spaceRows">
-                            <th id="gradesTitle" scope="row">Lengua</th>
-                                @foreach($trimesterGrade['Lengua'] as $lenguaGrade)
-                                    <td>{{ $lenguaGrade }}</td>
-                                @endforeach
-                            <td>6.6</td>
-                            </tr>
-                            <tr id="spaceRows">
-                            <th id="gradesTitle" scope="row">Historia</th>
-                                @foreach($trimesterGrade['Historia'] as $historiaGrade)
-                                    <td>{{ $historiaGrade }}</td>
-                                @endforeach
-                            <td>9.3</td>
-                            </tr>
-                            <tr id="spaceRows">
-                            <th id="gradesTitle" scope="row">Geografía</th>
-                                @foreach($trimesterGrade['Geografía'] as $geografiaGrade)
-                                    <td>{{ $geografiaGrade }}</td>
-                                @endforeach
-                            <td>4</td>
-                            </tr>
-                        </tbody>
-                        </table>
-                    </div>
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+            <div  class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                <button id="trimesterHeader" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                    Primer trimestre
+                </button>
+                </h2>
+                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                <div id="trimesterBody" class="accordion-body">
+                <table class="table">
+                    <thead id="tableBody">
+                        <tr id="spaceRows">
+                        <th></th>
+                        <th>I</th>
+                        <th>II</th>
+                        <th>III</th> 
+                        <th>Promedio</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <tr id="spaceRows">
+                        <th id="gradesTitle" scope="row">Lengua</th>
+                        <td>5</td>
+                        <td>5</td>
+                        <td>10</td>
+                        <td>6.6</td>
+                        </tr>
+                        <tr id="spaceRows">
+                        <th id="gradesTitle" scope="row">Matemáticas</th>
+                        <td>8</td>
+                        <td>8</td>
+                        <td>8</td>
+                        <td>8</td>
+                        </tr>
+                        <tr id="spaceRows">
+                        <th id="gradesTitle" scope="row">Inglés</th>
+                        <td>5</td>
+                        <td>5</td>
+                        <td>10</td>
+                        <td>6.6</td>
+                        </tr>
+                        <tr id="spaceRows">
+                        <th id="gradesTitle" scope="row">Historia</th>
+                        <td>10</td>
+                        <td>8</td>
+                        <td>10</td>
+                        <td>9.3</td>
+                        </tr>
+                        <tr id="spaceRows">
+                        <th id="gradesTitle" scope="row">Geografía</th>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>4</td>
+                        </tr>
+                    </tbody>
+                    </table>
                 </div>
             </div>
-            <br>
-                          
-        @endforeach
-        
-    </div>
+        </div>
+        <br>
+            <div id="trimesterBody" class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                <button id="trimesterHeader" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                    Segundo trimestre
+                </button>
+                </h2>
+                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                <div class="accordion-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                        <th></th>
+                        <th>I</th>
+                        <th>II</th>
+                        <th>III</th> 
+                        <th>Promedio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <th id="gradesTitle" scope="row">Lengua</th>
+                        <td>5</td>
+                        <td>5</td>
+                        <td>10</td>
+                        <td>6.6</td>
+                        </tr>
+                        <tr>
+                        <th id="gradesTitle" scope="row">Matemáticas</th>
+                        <td>8</td>
+                        <td>8</td>
+                        <td>8</td>
+                        <td>8</td>
+                        </tr>
+                        <tr>
+                        <th id="gradesTitle" scope="row">Lengua</th>
+                        <td>5</td>
+                        <td>5</td>
+                        <td>10</td>
+                        <td>6.6</td>
+                        </tr>
+                        <th id="gradesTitle" scope="row">Historia</th>
+                        <td>10</td>
+                        <td>8</td>
+                        <td>10</td>
+                        <td>9.3</td>
+                        </tr>
+                        <tr>
+                        <th id="gradesTitle" scope="row">Geografía</th>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>4</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <br>
+            <div id="trimesterBody" class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                <button id="trimesterHeader" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                    Tercer trimestre
+                </button>
+                </h2>
+                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                <div class="accordion-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                        <th></th>
+                        <th>I</th>
+                        <th>II</th>
+                        <th>III</th> 
+                        <th>Promedio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <th id="gradesTitle" scope="row">Lengua</th>
+                        <td>5</td>
+                        <td>5</td>
+                        <td>10</td>
+                        <td>6.6</td>
+                        </tr>
+                        <tr>
+                        <th id="gradesTitle" scope="row">Matemáticas</th>
+                        <td>8</td>
+                        <td>8</td>
+                        <td>8</td>
+                        <td>8</td>
+                        </tr>
+                        <tr>
+                        <th id="gradesTitle" scope="row">Lengua</th>
+                        <td>5</td>
+                        <td>5</td>
+                        <td>10</td>
+                        <td>6.6</td>
+                        </tr>
+                        <th id="gradesTitle" scope="row">Historia</th>
+                        <td>10</td>
+                        <td>8</td>
+                        <td>10</td>
+                        <td>9.3</td>
+                        </tr>
+                        <tr>
+                        <th id="gradesTitle" scope="row">Geografía</th>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>4</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
         <br>
         <div id="averageContainer">
             <div id="averageCard">
@@ -108,11 +219,9 @@
                     </div>
             </div>
         </div>
-
-
         @if(Auth::check() && Auth::user()->isTeacher)
         <a class="returnButton"  href="{{ route('home') }}"> 
             <img src="https://res.cloudinary.com/de1i08drf/image/upload/v1675151615/Atenea/flechaAzulIzquierda_ab7yvw.png" alt= "volver a inicio"> 
         </a> 
-        @endif      
+        @endif
 @endsection
