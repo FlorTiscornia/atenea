@@ -33,6 +33,14 @@
             </form>
             </div>
         </div>
+        @if(Auth::check() && Auth::user()->isTeacher) 
+                                <button class="btn-secondary">
+                                    <a id="buttonAdd" href="{{ route('createGrade', ['id'=>$user->id] ) }}">
+                                        Crear nota
+                                    </a>
+                                </button>
+                           
+        @endif
         <div>
         @foreach($trimesterGrades as $key => $trimesterGrade)
             <div class="accordion" id="accordionPanelsStayOpenExample">
@@ -61,15 +69,7 @@
                                     <td>{{ $inglesGrade }}</td>
                                 @endforeach
                             <td>6.6</td>
-                            @if(Auth::check() && Auth::user()->isTeacher) 
-                            <td> 
-                                <button class="btn-secondary">
-                                    <a id="buttonAdd" href="{{ route('createGrade') }}">
-                                        <div class="text-white fs-4">✏️</div>
-                                    </a>
-                                </button>
-                            </td>
-                            @endif
+                            
                             </tr>
                             <tr id="spaceRows">
                             <th id="gradesTitle" scope="row">Matemáticas</th>

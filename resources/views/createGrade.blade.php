@@ -7,11 +7,10 @@
             <h5>Clase 1ºA</h5>
         </div>
         <div class="createForm">    
-            <form class="justify-content-center" action="{{ route('storeGrade', ['id' => idUser] )}}" method="post" id="form">
+            <form class="justify-content-center" action="{{ route('storeGrade', ['id'=>$user->id] )}}" method="post" id="form">
                 @csrf
                 <div>
-                <label for="users" class="form-label">Estudiante</label>
-                <select name="select"> <option value="{{$user->id}}}">{{$user->id}}</option></select>
+                <label for="users" class="form-label">Estudiante: {{$user->name}}</label>
                 </div>
                 <div class="mb-3">
                     <label for="trimester" class="form-label">Trimestre</label>

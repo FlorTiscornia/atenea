@@ -41,6 +41,7 @@ class UserController extends Controller
     public function create()
     {
         //
+        $user = new User();
         return view ('createUser');
     }
 
@@ -55,9 +56,10 @@ class UserController extends Controller
         //
         $user = request()->except('_token');
         User::create($user);
-        return redirect()->route('home');
+        $user->save();
+        return redirect()->route('home')
+            ->with('success', 'Estudiante creado con éxito.');
     }
-
     /**
      * Display the specified resource.
      *
