@@ -33,8 +33,7 @@ class GradeController extends Controller
         //
         $grade = new Grade();
         $user = User::find($id);
-/*         $user = User::pluck('name', 'id');
- */        return view('createGrade', compact('grade', 'user'));
+        return view('createGrade', compact('grade', 'user')); //aquí no va si redirigimos donde queremos no sale
     }
 
     /**

@@ -22,7 +22,11 @@
                 </div>
                 <div class="mb-3">
                     <label for="exam" class="form-label">Examen</label>
-                    <input type="text" id="exam" name="exam" class="form-control" placeholder="Escribe la nota del examen">
+                    <input type="text" id="exam" name="exam" class="form-control" placeholder="Escribe el número de examen">
+                </div>
+                <div class="mb-3">
+                    <label for="grade" class="form-label">Nota</label>
+                    <input type="text" id="grade" name="grade" class="form-control" placeholder="Escribe la nota del examen">
                 </div>
         </div>
         <div class="formBottomActions">
