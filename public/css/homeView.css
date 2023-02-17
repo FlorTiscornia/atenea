@@ -29,8 +29,6 @@
     flex-flow: row wrap;
     justify-content: space-between;
     margin:2% 10% 0 10%;
-    border: solid 2px orange;
-    
 }
 .studentInfo{
     text-decoration: none !important;

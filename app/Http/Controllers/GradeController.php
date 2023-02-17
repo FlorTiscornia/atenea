@@ -15,11 +15,12 @@ class GradeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
-        $users = User::get();
-/*         $grades = Grade::get();
- */        return view('readUserGrade', compact('users'));
+        // Obtener todas las notas desde la base de datos
+        $grades = Grade::all();
+        return view('readUserGrade', compact('grades'));
     }
 
     /**

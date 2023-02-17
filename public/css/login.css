@@ -15,11 +15,11 @@ body{
 
 
 .salute{
-    margin-top: 8%;
+    margin-top: 2%;
     font-size: 3em!important;
     color: #1F363D!important;
     font-weight: bold!important;
-    margin-bottom: 8%!important;
+    margin-bottom: 2%!important;
 }
 
 #loginCard{
@@ -30,10 +30,9 @@ body{
 #cardContainer{
         background-color: #70A9A1;
         width: 314px;
-        border: solid 2px orange;
         border-radius: 10px;
 }
 
 #scholarYear{
-    margin-top: 8%;
+    margin-top: 4.5%;
 }
