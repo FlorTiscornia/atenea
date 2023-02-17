@@ -48,12 +48,16 @@ class GradeController extends Controller
         $request->validate([
             'idUser' => 'required|exists:users,id',
             'subject' => 'required',
+            'exam' => 'required|numeric|min:1|max:3',
             'grade' => 'required|numeric|min:1|max:10'
+
         ]);
 
+        $grade = request()->except('_token');
         $grade = new Grade();
         $grade->idUser = $request->idUser;
         $grade->subject = $request->subject;
+        $grade->exam = $request->exam;
         $grade->grade = $request->grade;
         $grade->save();
 
