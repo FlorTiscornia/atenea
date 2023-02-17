@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+use App\Models\Grade;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -73,8 +74,6 @@ class UserController extends Controller
         foreach ($grades as $grade) {
             $trimesterGrades[$grade->trimester][$grade->subject][] = $grade->grade;
         }
-        
-
         return view ('readUserGrade', compact('user','grades', 'trimesterGrades'));
     }
 

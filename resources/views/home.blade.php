@@ -7,11 +7,6 @@
                 <div class="text-white fs-4">Añadir estudiante</div>
             </a>
         </button>
-        <button class="btn-secondary">
-            <a id="buttonAdd" href="{{ route('createUser') }}">
-                <div class="text-white fs-4">Añadir calificación</div>
-            </a>
-        </button>
         <h5>Clase 1ºA</h5>
     </div>
     @foreach ($users as $user)

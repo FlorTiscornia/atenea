@@ -31,6 +31,9 @@ class GradeController extends Controller
     public function create()
     {
         //
+        $grade = new Grade();
+        $user = User::pluck('name', 'id');
+        return view('createGrade', compact('grade', 'user'));
     }
 
     /**
@@ -39,9 +42,22 @@ class GradeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $id)
     {
         //
+        $request->validate([
+            'idUser' => 'required|exists:users,id',
+            'subject' => 'required',
+            'grade' => 'required|numeric|min:0|max:10'
+        ]);
+
+        $grade = new Grade();
+        $grade->idUser = $request->idUser;
+        $grade->subject = $request->subject;
+        $grade->grade = $request->grade;
+        $grade->save();
+
+        return redirect()->route('readUserGrade', $request->idUser)->with('success', 'Nota añadida con éxito');
     }
 
     /**
