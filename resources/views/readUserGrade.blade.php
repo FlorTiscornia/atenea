@@ -29,18 +29,19 @@
                     <div>
                     <a href="{{ route('editUser', ['id'=>$user->id]) }}" id="editButton">Editar Estudiante</a>
                     </div>
+                    <br>
+                    <div>
+                    <button class="btn-secondary">
+                        <a id="buttonAdd" href="{{ route('createGrade', ['id'=>$user->id] ) }}">
+                        Crear nota
+                        </a>
+                    </button>   
+                    </div>
+                    <br> 
                     @endif
             </form>
             </div>
         </div>
-        @if(Auth::check() && Auth::user()->isTeacher) 
-                                <button class="btn-secondary">
-                                    <a id="buttonAdd" href="{{ route('createGrade', ['id'=>$user->id] ) }}">
-                                        Crear nota
-                                    </a>
-                                </button>
-                           
-        @endif
         <div>
         @foreach($trimesterGrades as $key => $trimesterGrade)
             <div class="accordion" id="accordionPanelsStayOpenExample">
