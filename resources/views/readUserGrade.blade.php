@@ -69,36 +69,35 @@
                                 @foreach($trimesterGrade['Inglés'] as $inglesGrade)
                                     <td>{{ $inglesGrade }}</td>
                                 @endforeach
-                            <td>6.6</td>
-                            
+                            <td></td>                            
                             </tr>
                             <tr id="spaceRows">
                             <th id="gradesTitle" scope="row">Matemáticas</th>
                                 @foreach($trimesterGrade['Matemáticas'] as $matematicasGrade)
                                     <td>{{ $matematicasGrade }}</td>
                                 @endforeach
-                            <td>8</td>
+                            <td></td>
                             </tr>
                             <tr id="spaceRows">
                             <th id="gradesTitle" scope="row">Lengua</th>
                                 @foreach($trimesterGrade['Lengua'] as $lenguaGrade)
                                     <td>{{ $lenguaGrade }}</td>
                                 @endforeach
-                            <td>6.6</td>
+                            <td></td>
                             </tr>
                             <tr id="spaceRows">
                             <th id="gradesTitle" scope="row">Historia</th>
                                 @foreach($trimesterGrade['Historia'] as $historiaGrade)
                                     <td>{{ $historiaGrade }}</td>
                                 @endforeach
-                            <td>9.3</td>
+                            <td></td>
                             </tr>
                             <tr id="spaceRows">
                             <th id="gradesTitle" scope="row">Geografía</th>
                                 @foreach($trimesterGrade['Geografía'] as $geografiaGrade)
                                     <td>{{ $geografiaGrade }}</td>
                                 @endforeach
-                            <td>4</td>
+                            <td></td>
                             </tr>
                         </tbody>
                         </table>

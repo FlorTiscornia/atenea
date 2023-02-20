@@ -241,7 +241,6 @@ class DatabaseSeeder extends Seeder
             'isTeacher' => true
         ]);
 
-
         Grade::factory()->create([
             'trimester' => 1,
             'subject' => 'Lengua',
@@ -364,31 +363,6 @@ class DatabaseSeeder extends Seeder
             'exam' => 3,
             'year' =>2023,
             'grade' => 15,
-            'idUser' => 1
-        ]);
-
-        Grade::factory()->create([
-            'trimester' => 1,
-            'subject' => 'Lengua',
-            'exam' => 1,
-            'year' =>2023,
-            'grade' => 8,
-            'idUser' => 1
-        ]);
-        Grade::factory()->create([
-            'trimester' => 1,
-            'subject' => 'Lengua',
-            'exam' => 2,
-            'year' =>2023,
-            'grade' => 8,
-            'idUser' => 1
-        ]);
-        Grade::factory()->create([
-            'trimester' => 1,
-            'subject' => 'Lengua',
-            'exam' => 3,
-            'year' =>2023,
-            'grade' => 8,
             'idUser' => 1
         ]);
 
