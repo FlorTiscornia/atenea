@@ -83,6 +83,7 @@ To run the tests open terminal and enter the command
 
 
 🧪Next Steps:
+- Some design tweaks and improvements.
 - Add student DNI identification and a search engine.
 - Add more teachers and subjects.
 - Add more functions to the app such as exam dates or relevant information.
