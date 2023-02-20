@@ -24,7 +24,6 @@
 }
 
 #allStudents{
-    border: solid 2px pink;
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
     grid-template-rows: 10% 10% 10% 10% 10%;
@@ -37,9 +36,7 @@
     justify-content: center;
     align-items: center;
     height: 50px;
-    margin:2% 10% 0 10%;
-    border: solid 2px orange;
-    
+    margin:2% 10% 0 10%;   
 }
 .studentInfo{
     text-decoration: none !important;
