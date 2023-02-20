@@ -13,33 +13,38 @@
                     <label for="users" class="form-label">Estudiante: {{$user->name}} {{$user->lastname}}</label>
                 </div>
     <div>
-        <label for="trimester">Trimester:</label>
-        <input type="number" name="trimester" id="trimester" value="">
+        <label for="trimester" class="form-label">Trimestre</label>
+        <input type="number" name="trimester" class="form-control" id="trimester" value="">
     </div>
     <div>
-        <label for="subject">Subject:</label>
-        <input type="text" name="subject" id="subject" value="{{ old('subject') }}">
+        <label for="subject" class="form-label">Asignatura</label>
+        <select name="subject" class="form-control" id="subject">
+                        <option value="Matemáticas">Matemáticas</option>
+                        <option value="Lengua">Lengua</option>
+                        <option value="Geografía">Geografía</option>
+                        <option value="Historia">Historia</option>
+                        <option value="Inglés">Inglés</option>
+        </select>
     </div>
     <div>
-        <label for="exam">Exam:</label>
-        <input type="number" name="exam" id="exam" value="{{ old('exam') }}">
+    <label for="exam" class="form-label">Examen</label>
+        <input type="number" name="exam" class="form-control" id="exam"  value="{{ old('exam') }}">
     </div>
     <div>
-        <label for="year">Year:</label>
-        <input type="number" name="year" id="year" value="{{ old('year') }}">
+    <label for="year" class="form-label">Year</label>
+        <input type="number" name="year" class="form-control" id="year"  value="{{ old('year') }}">
     </div>
     <div>
-        <label for="grade">Grade:</label>
-        <input type="number" name="grade" id="grade" value="{{ old('grade') }}">
+    <label for="grade" class="form-label">Grade</label>
+        <input type="number" name="grade" class="form-control" id="grade"  value="{{ old('grade') }}">
     </div>
 
     <div>
-        <label for="idUser">User</label>
-        <input type="number" name="idUser" id="idUser" value="{{ $user->id }}">
+    <label for="idUser" class="form-label">idUser</label>
+        <input type="number" name="idUser" class="form-control" id="idUser"  value="{{ $user->id }}">
     </div>
 
         <div class="formBottomActions">
-           
             <a href="{{ route('home') }}"> 
                 <img src="https://res.cloudinary.com/de1i08drf/image/upload/v1675151615/Atenea/flechaAzulIzquierda_ab7yvw.png" alt= "volver a inicio"> 
             </a>
@@ -49,5 +54,4 @@
             </form>
         </div>
     </div>
-   
 @endsection
