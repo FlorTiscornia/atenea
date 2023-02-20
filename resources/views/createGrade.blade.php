@@ -14,7 +14,11 @@
                 </div>
     <div>
         <label for="trimester" class="form-label">Trimestre</label>
-        <input type="number" name="trimester" class="form-control" id="trimester" value="">
+        <select name="subject" class="form-control" id="subject">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+        </select>
     </div>
     <div>
         <label for="subject" class="form-label">Asignatura</label>
@@ -31,16 +35,16 @@
         <input type="number" name="exam" class="form-control" id="exam"  value="{{ old('exam') }}">
     </div>
     <div>
-    <label for="year" class="form-label">Year</label>
+    <label for="year" class="form-label">Año</label>
         <input type="number" name="year" class="form-control" id="year"  value="{{ old('year') }}">
     </div>
     <div>
-    <label for="grade" class="form-label">Grade</label>
+    <label for="grade" class="form-label">Nota</label>
         <input type="number" name="grade" class="form-control" id="grade"  value="{{ old('grade') }}">
     </div>
 
     <div>
-    <label for="idUser" class="form-label">idUser</label>
+    <label for="idUser" class="form-label">Estudiante</label>
         <input type="number" name="idUser" class="form-control" id="idUser"  value="{{ $user->id }}">
     </div>
 
