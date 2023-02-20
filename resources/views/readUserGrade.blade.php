@@ -66,37 +66,47 @@
                         <tbody id="tableBody">
                             <tr id="spaceRows">
                             <th id="gradesTitle" scope="row">Inglés</th>
-                                @foreach($trimesterGrade['Inglés'] as $inglesGrade)
-                                    <td>{{ $inglesGrade }}</td>
-                                @endforeach
+                                @if(isset($trimesterGrade['Inglés']))
+                                    @foreach($trimesterGrade['Inglés'] as $inglesGrade)
+                                        <td>{{ $inglesGrade }}</td>
+                                    @endforeach
+                                @endif
                             <td></td>                            
                             </tr>
                             <tr id="spaceRows">
                             <th id="gradesTitle" scope="row">Matemáticas</th>
-                                @foreach($trimesterGrade['Matemáticas'] as $matematicasGrade)
-                                    <td>{{ $matematicasGrade }}</td>
-                                @endforeach
+                                @if(isset($trimesterGrade['Matemáticas']))
+                                    @foreach($trimesterGrade['Matemáticas'] as $matematicasGrade)
+                                        <td>{{ $matematicasGrade }}</td>
+                                    @endforeach
+                                @endif
                             <td></td>
                             </tr>
                             <tr id="spaceRows">
                             <th id="gradesTitle" scope="row">Lengua</th>
-                                @foreach($trimesterGrade['Lengua'] as $lenguaGrade)
-                                    <td>{{ $lenguaGrade }}</td>
-                                @endforeach
+                                @if(isset($trimesterGrade['Lengua']))
+                                    @foreach($trimesterGrade['Lengua'] as $lenguaGrade)
+                                        <td>{{ $lenguaGrade }}</td>
+                                    @endforeach
+                                @endif
                             <td></td>
                             </tr>
                             <tr id="spaceRows">
                             <th id="gradesTitle" scope="row">Historia</th>
-                                @foreach($trimesterGrade['Historia'] as $historiaGrade)
-                                    <td>{{ $historiaGrade }}</td>
-                                @endforeach
+                                @if(isset($trimesterGrade['Historia']))
+                                    @foreach($trimesterGrade['Historia'] as $historiaGrade)
+                                        <td>{{ $historiaGrade }}</td>
+                                    @endforeach
+                                @endif
                             <td></td>
                             </tr>
                             <tr id="spaceRows">
                             <th id="gradesTitle" scope="row">Geografía</th>
-                                @foreach($trimesterGrade['Geografía'] as $geografiaGrade)
-                                    <td>{{ $geografiaGrade }}</td>
-                                @endforeach
+                                @if(isset($trimesterGrade['Geografía']))
+                                    @foreach($trimesterGrade['Geografía'] as $geografiaGrade)
+                                        <td>{{ $geografiaGrade }}</td>
+                                    @endforeach
+                                @endif
                             <td></td>
                             </tr>
                         </tbody>

@@ -51,18 +51,8 @@ class GradeController extends Controller
     {
         $grade = request()->except('_token');
         $user = User::find($id);
-        Grade::create($grade);
-    
-        $trimester = $user->trimester; // Cambia el nombre de la variable a $trimester
-        $trimester->idUser = $request->idUser;
-        $trimester->trimester = $request->trimester;
-        $trimester->subject = $request->subject;
-        $trimester->exam = $request->exam;
-        $trimester->year = $request->year;
-        $trimester->grade = $request->grade;
-    
-        var_dump($trimester);
-    
+        Grade::create($grade);        
+        
         return redirect()->route('readUserGrade', $id)->with('success', 'Nota añadida con éxito');
     }
     /**

@@ -10,11 +10,11 @@
         <form class="justify-content-center" action="{{ route('storeGrade', ['id'=>$user->id] )}}" method="post" id="form">
         @csrf
                 <div class="mb-3">
-                    <label for="users" class="form-label">Estudiante: {{$user->name}}</label>
+                    <label for="users" class="form-label">Estudiante: {{$user->name}} {{$user->lastname}}</label>
                 </div>
     <div>
         <label for="trimester">Trimester:</label>
-        <input type="number" name="trimester" id="trimester" value="{{$trimester->trimester}}">
+        <input type="number" name="trimester" id="trimester" value="">
     </div>
     <div>
         <label for="subject">Subject:</label>
@@ -33,7 +33,10 @@
         <input type="number" name="grade" id="grade" value="{{ old('grade') }}">
     </div>
 
-
+    <div>
+        <label for="idUser">User</label>
+        <input type="number" name="idUser" id="idUser" value="{{ $user->id }}">
+    </div>
 
         <div class="formBottomActions">
            
