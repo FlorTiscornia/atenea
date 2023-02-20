@@ -25,10 +25,10 @@ class CRUDUserTest extends TestCase
 
         $userNoTeacher = User::factory()->create(['isTeacher'=>false]);
         $this->actingAs($userNoTeacher);
-        $response=$this->get(route('showUser', $user->id));
+        $response=$this->get(route('readUserGrade', $user->id));
         $response -> assertSee($user->name);
         $response ->assertStatus(200)
-                ->assertViewIs('showUser');
+                ->assertViewIs('readUserGrade');
 
         $userTeacher = User::factory()->create(['isTeacher'=>true]);
         $this->actingAs($userTeacher);
@@ -111,9 +111,9 @@ class CRUDUserTest extends TestCase
         $user=User::factory()->create();
         $this->assertCount(1,User::all());
         $this->actingAs($user);
-        $response=$this->get(route('showUser', $user->id));
+        $response=$this->get(route('readUserGrade', $user->id));
         $response->assertSee($user->name);
-        $response->assertStatus(200)->assertViewIs('showUser');
+        $response->assertStatus(200)->assertViewIs('readUserGrade');
     }
     
 }
