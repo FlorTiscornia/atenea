@@ -56,7 +56,6 @@ class UserController extends Controller
         //
         $user = request()->except('_token');
         User::create($user);
-        $user->save();
         return redirect()->route('home')
             ->with('success', 'Estudiante creado con éxito.');
     }
