@@ -15,7 +15,8 @@ Atenea is an app to consult and manage school grades. This project is being deve
 <img style="width:150px;" src="https://user-images.githubusercontent.com/113030390/220130453-a7697d57-3d89-42fd-945a-346982e38310.png"> <img style="width:150px;" src="https://user-images.githubusercontent.com/113030390/220130514-9f11d5c3-34bd-4986-a7fd-8de0409c88ea.png">
 
 ## Screen format (teacher): 
-<img src="https://user-images.githubusercontent.com/113030390/220101000-dd8aa893-2b14-4814-894a-9b5c983b79ff.png" width="50%"> <img src="https://user-images.githubusercontent.com/113030390/220101080-efcc1dd7-8cec-426e-b087-fce781df23ae.png" width="50%"> <img src="https://user-images.githubusercontent.com/113030390/220101183-beb4f854-48b4-4e61-909f-f51663cfb29d.png" width="50%">
+<img src="https://user-images.githubusercontent.com/113030390/220175941-ee607751-b06d-4d20-8616-ca4e6ab4ed1a.png" width="50%"> <img src="https://user-images.githubusercontent.com/113030390/220176018-11d5b805-60f3-4f03-86f5-cc48d46ec826.png" width="50%"> <img src="https://user-images.githubusercontent.com/113030390/220176097-58395f34-246c-4213-8bf0-b5897ada17c3.png" width="50%">
+
 
 ## 🔧Stacks:
 | Stacks |
