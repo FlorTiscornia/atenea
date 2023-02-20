@@ -47,60 +47,21 @@ class GradeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-/*     public function store(Request $request, $id)
-    {
-        //
-        //$request->validate([
-          //  'idUser' => 'required|exists:users,id',
-          //  'subject' => 'required',
-          //  'exam' => 'required|numeric|min:1|max:3',
-         //   'grade' => 'required|numeric|min:1|max:10'
-
-        //]);
-
-        $grade = request()->except('_token');
-        $grade = new Grade();
-        $grade->idUser = $request->idUser;
-        $grade->subject = $request->subject;
-        $grade->exam = $request->exam;
-        $grade->grade = $request->grade;
-        $grade->save();
-
-        return redirect()->route('readUserGrade', $request->idUser)->with('success', 'Nota añadida con éxito');
-    } */
-/*     public function store(Request $request, $id)
-    {
-        $request->validate([
-            'idUser' => 'required|exists:users,id',
-            'subject' => 'required',
-            'exam' => 'required|numeric|min:1|max:3',
-            'grade' => 'required|numeric|min:1|max:10'
-        ]);
-    
-        
-        $grade = new Grade();
-        $grade->idUser = $id; // usar el ID recibido como parámetro
-        $grade->subject = $request->subject;
-        $grade->exam = $request->exam;
-        $grade->grade = $request->grade;
-        $grade->save();
-    
-        return redirect()->route('readUserGrade', $id)->with('success', 'Nota añadida con éxito');
-    } */
     public function store(Request $request, $id)
     {
-        $user = User::findOrFail($id);
-        $grades = $request->input('grades');
-        $trimester = $request->input('trimester');
-        
-        foreach ($grades as $subject => $grade) {
-            $newGrade = new Grade();
-            $newGrade->idUser = $user->id;
-            $newGrade->subject = $subject;
-            $newGrade->grade = $grade;
-            $newGrade->trimester = $trimester;
-            $newGrade->save();
-        }
+        $grade = request()->except('_token');
+        $user = User::find($id);
+        Grade::create($grade);
+    
+        $trimester = $user->trimester; // Cambia el nombre de la variable a $trimester
+        $trimester->idUser = $request->idUser;
+        $trimester->trimester = $request->trimester;
+        $trimester->subject = $request->subject;
+        $trimester->exam = $request->exam;
+        $trimester->year = $request->year;
+        $trimester->grade = $request->grade;
+    
+        var_dump($trimester);
     
         return redirect()->route('readUserGrade', $id)->with('success', 'Nota añadida con éxito');
     }
