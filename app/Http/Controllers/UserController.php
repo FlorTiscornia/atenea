@@ -75,10 +75,19 @@ class UserController extends Controller
         foreach ($grades as $grade) {
             $trimesterGrades[$grade->trimester][$grade->subject][] = $grade->grade;
         }
+
+        //promedio
+        foreach ($trimesterGrades as $subjects) {            
+                foreach($subjects as $grades){                    
+                    $average = array_sum($grades);     
+                    $subjects = $average;        
+                }
+            $subjects['promedio'] = array_sum($grades);
+        }
+        
+
         return view ('readUserGrade', compact('user','grades', 'trimesterGrades'));
     }
-
-
 
     /**
      * Show the form for editing the specified resource.

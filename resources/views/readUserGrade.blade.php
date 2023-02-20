@@ -71,7 +71,7 @@
                                         <td>{{ $inglesGrade }}</td>
                                     @endforeach
                                 @endif
-                            <td></td>                            
+                            <td>{{ $trimesterGrade['Inglés']['promedio'] }} </td>                            
                             </tr>
                             <tr id="spaceRows">
                             <th id="gradesTitle" scope="row">Matemáticas</th>
