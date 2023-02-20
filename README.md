@@ -11,10 +11,8 @@ Atenea is an app to consult and manage school grades. This project is being deve
 | :---: | :---: | :---: | :---: |
 |<img src="https://user-images.githubusercontent.com/113030390/218047493-11ac48b1-6081-4de5-93b3-e98d3b83b170.png" width="50%"> |<img src="https://user-images.githubusercontent.com/113030390/218046666-f83a1493-5d35-4563-8f39-8309086cb371.png" width="50%"> |<img src="https://user-images.githubusercontent.com/113030390/218046491-cfb78369-022c-4cf4-9cd0-82e1694c1c53.png" width="50%"> |<img src="https://user-images.githubusercontent.com/113030390/218044904-6be748b6-a49e-47e9-9e29-1a0d60e5fe99.png" width="50%">|
 
-## Mobile format:
-| User |
-| --- | --- |
-|<img style="width:135px;" src="">|<img style="width:150px;" src="">|
+## Mobile format (Student):
+<img style="width:150px;" src="https://user-images.githubusercontent.com/113030390/220108736-05cc5272-6526-426f-a8b7-938ae76f4493.png"> <img style="width:150px;" src="https://user-images.githubusercontent.com/113030390/220108820-a553fe64-ba9f-4a3b-b924-fc88565ead60.png">
 
 ## Screen format (teacher): 
 <img src="https://user-images.githubusercontent.com/113030390/220101000-dd8aa893-2b14-4814-894a-9b5c983b79ff.png" width="50%"> <img src="https://user-images.githubusercontent.com/113030390/220101080-efcc1dd7-8cec-426e-b087-fce781df23ae.png" width="50%"> <img src="https://user-images.githubusercontent.com/113030390/220101183-beb4f854-48b4-4e61-909f-f51663cfb29d.png" width="50%">
