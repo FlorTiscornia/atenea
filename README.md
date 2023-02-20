@@ -84,7 +84,7 @@ To run the tests open terminal and enter the command
 
 🧪Next Steps:
 - Some design tweaks and improvements.
-- Add student DNI identification and a search engine.
+- Finish the CRUD of the grades and integrate the drag 'n drop.
 - Add more teachers and subjects.
 - Add more functions to the app such as exam dates or relevant information.
 - Upgrade the app with more classrooms/groups, academic years and the possibility to develop it for multiple schools.
