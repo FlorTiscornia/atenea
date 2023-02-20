@@ -70,8 +70,8 @@
                                     @foreach($trimesterGrade['Inglés'] as $inglesGrade)
                                         <td>{{ $inglesGrade }}</td>
                                     @endforeach
-                                @endif
-                            <td>{{ $trimesterGrade['Inglés']['promedio'] }} </td>                            
+                                    <td></td>
+                                @endif                                                      
                             </tr>
                             <tr id="spaceRows">
                             <th id="gradesTitle" scope="row">Matemáticas</th>
@@ -79,8 +79,8 @@
                                     @foreach($trimesterGrade['Matemáticas'] as $matematicasGrade)
                                         <td>{{ $matematicasGrade }}</td>
                                     @endforeach
+                                    <td></td>
                                 @endif
-                            <td></td>
                             </tr>
                             <tr id="spaceRows">
                             <th id="gradesTitle" scope="row">Lengua</th>
@@ -88,8 +88,8 @@
                                     @foreach($trimesterGrade['Lengua'] as $lenguaGrade)
                                         <td>{{ $lenguaGrade }}</td>
                                     @endforeach
+                                    <td></td>
                                 @endif
-                            <td></td>
                             </tr>
                             <tr id="spaceRows">
                             <th id="gradesTitle" scope="row">Historia</th>
@@ -97,8 +97,8 @@
                                     @foreach($trimesterGrade['Historia'] as $historiaGrade)
                                         <td>{{ $historiaGrade }}</td>
                                     @endforeach
+                                    <td></td>
                                 @endif
-                            <td></td>
                             </tr>
                             <tr id="spaceRows">
                             <th id="gradesTitle" scope="row">Geografía</th>
@@ -106,8 +106,8 @@
                                     @foreach($trimesterGrade['Geografía'] as $geografiaGrade)
                                         <td>{{ $geografiaGrade }}</td>
                                     @endforeach
+                                    <td></td>
                                 @endif
-                            <td></td>
                             </tr>
                         </tbody>
                         </table>
