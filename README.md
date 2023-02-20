@@ -87,11 +87,7 @@ To run the tests open terminal and enter the command
 
 
 🧪Next Steps:
-- 
-- 
-- 
-- 
-- 
-- 
-
-
+- Add student DNI identification and a search engine.
+- Add more teachers and subjects.
+- Add more functions to the app such as exam dates or relevant information.
+- Upgrade the app with more classrooms/groups, academic years and the possibility to develop it for multiple schools.
