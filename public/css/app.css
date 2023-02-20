@@ -1,0 +1,67 @@
+@media screen and (max-width: 480px) {
+   /*For mobile phones: */ 
+
+    #navbarDropdown{
+        font-size: 12px!important;
+    }
+
+    .dropdown-menu{
+        --bs-dropdown-min-width:70px!important;
+        --bs-dropdown-padding-y:0px!important;
+    }
+
+    #outButton{
+        font-size:9px!important;
+    }
+
+}
+
+body {
+
+    margin: 0;
+    padding: 0;
+}
+*{
+    font-family: 'Francois One'!important;
+}
+    
+.header{
+    background-color: #1F363D!important;
+    border: solid 1px #1F363D;
+    color: white;
+}
+
+.logoConteiner{
+    margin: 3%; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logoAtenea{
+    height: auto;
+}
+
+.slogan{
+    font-size: 3vw;
+    margin-top: 20px;
+}
+
+#logName{
+    font-size: 1.5vw!important;
+}
+
+.logoutButton{
+    display: flex;
+    justify-content: center!important;    
+}
+
+#outButton{
+    text-align: center;
+    font-size: 1.3vw;
+}
+
+.dropdown-item{
+    color: white!important;
+}

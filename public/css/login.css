@@ -1,0 +1,91 @@
+*{
+    font-family: 'Francois One'!important;
+}
+
+@media screen and (max-width: 480px) {
+    
+    #studentLog{
+        font-size: 18px!important;
+    }
+    #salute{
+        margin-top: 12%;
+        margin-bottom: 10%!important;
+    }
+
+    #loginBttn{
+        font-size: 18px!important;
+        }
+
+    #scholarYear{
+        margin-top: 8%!important;
+        font-size: 16px!important;
+    }
+}
+
+body{
+    background-color: #EFFCE6 !important;
+}
+/*.form-control{
+    background-color: white!important;
+
+}*/
+
+#salute{
+    margin-top: 7%;
+    font-size: 3em;
+    color: #1F363D;
+    font-weight: bold;
+    margin-bottom: 7%;
+}
+
+#loginCard{
+    display: flex;
+    justify-content: center;
+}
+
+#cardContainer{
+    background-color: #70A9A1;
+    width: 314px;
+    border-radius: 10px;
+    border: 0;
+}
+
+#cardBackground{
+    background-color: transparent!important;
+    border: 0!important;
+}
+
+#studentLog{
+    color:white;
+    font-size: 1.3vw;
+}
+
+#logForgotContainer{
+    display: flex!important;
+    flex-direction: column;
+    align-items: center;
+}
+
+#loginBttn{
+    margin-top: 3%;
+    background-color: #1F363D;
+    font-size: 1.3vw;
+    width: 40%;
+    border: 0;
+}
+
+
+#forgottenP{
+    background-color: #40798C;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+#scholarYear{
+    margin-top: 3%;
+    margin-bottom: 3%;
+    font-size: 1.1vw;
+}
+
+

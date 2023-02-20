@@ -1,0 +1,62 @@
+*{
+    font-family: 'Francois One'!important;
+}
+
+.btn-secondary{
+    background-color: #1F363D!important;
+    border-color: #1F363D;
+    border-radius: 5px;
+}
+
+#buttonAdd{
+    text-decoration: none !important;
+}
+
+.conteiner{
+    display: flex;
+    justify-content: space-between;
+    margin:0 10% 0 10%;
+}
+
+.conteiner a{
+    color: white;
+    
+}
+
+#allStudents{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 10% 10% 10% 10% 10%;
+    row-gap: 4px;
+    min-height: 750px;
+}
+
+#conteinerStudent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    margin:2% 10% 0 10%;   
+}
+.studentInfo{
+    text-decoration: none !important;
+    background-color: #70A9A1;
+    border-color: #70A9A1;
+    border-radius: 5px;
+    width: 99px;    
+}
+
+#studentTag{
+    text-decoration: none !important;
+    gap: 5px;
+}    
+
+h5{
+    text-align: right;    
+    color: #1F363D;
+}
+
+a:not([class]) {
+    text-decoration: none;
+    color: #1F363D !important;
+}

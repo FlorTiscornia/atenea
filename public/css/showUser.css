@@ -1,0 +1,86 @@
+#photoUser {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+.conteinerStudent{
+    margin-left: 5%;
+    display: flex;
+}
+
+.dataContainer2{
+    display: box;
+    width: 50%;
+}
+.row{
+    display: table-column;
+
+}
+p{
+    padding-left: 10px;
+}
+.buttom{
+    border-radius: 5%;
+}
+
+
+.createForm{
+    background-color: #70A9A1;
+    padding: 5%;
+    border-radius: 5px;
+    color:white;
+}
+
+.returnButton{
+    display: flex;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+#deleteButton{
+    color: white;
+    background-color: #E56C6C;
+    border: none;
+    border-radius: 5px;
+}
+
+#editButton{
+    color: #1F363D!important;
+    background-color:#9EC1A3;
+    border-radius: 5px;
+    border: none;
+    text-decoration: none;
+    padding: 4px;
+}
+.btn-secondary{
+    color: white!important;
+}
+#buttonAdd{
+    color: white!important;
+}
+.averageBack{
+    display:flex;
+    margin-left: 5%;
+}
+
+#averageContainer{
+    margin-left: 45%;
+}
+
+#averageCard{
+    background-color: #70A9A1;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 5px 0;
+}
+
+#averageGrade{
+    border-radius: 5px;
+    background-color: #1F363D;
+    color: white;
+    margin: 5% 0;
+    width: 30%;
+    text-align: center;
+}
