@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     
     <link rel="shortcut icon" type="image/x-icon" href="./img/buhoFavicon.png">    
@@ -12,13 +11,11 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Francois+One&family=Montserrat&family=Rye&display=swap" rel="stylesheet">
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     
-    <!-- Css -->
     <link href="{{ asset('css\login.css') }}" rel="stylesheet">
     <link href="{{ asset('css\email.css') }}" rel="stylesheet">
     <link href="{{ asset('css\app.css') }}" rel="stylesheet">
@@ -28,7 +25,7 @@
     <link href="{{ asset('css\homeView.css') }}" rel="stylesheet">
     <link href="{{ asset('css\showUser.css') }}" rel="stylesheet">
     <link href="{{ asset('css\gradeTable.css') }}" rel="stylesheet">
-    <!-- Scripts -->
+
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     <script src="{{ asset('js\validateForm.js') }}" rel="text/javascript"></script>
 </head>
@@ -48,22 +45,12 @@
                     </button>
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <!-- Left Side Of Navbar -->
                         <ul class="navbar-nav me-auto">
-
                         </ul>
 
-                        <!-- Right Side Of Navbar -->
                         <ul class="navbar-nav ms-auto">
-                            <!-- Authentication Links -->
                             @guest
-                                <!--@if (Route::has('login'))
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                    </li>
-                                @endif  -->
 
-                                
                             @else
                                 <li id="logName" class="nav-item dropdown">
                                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" francois-haspopup="true" francois-expanded="false" v-pre style="color:white;">
