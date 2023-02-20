@@ -37,7 +37,7 @@ Route::get('/edit/{id}', [UserController::class, 'edit'])->name('editUser')->mid
 Route::patch('/user/{id}', [UserController::class, 'update'])->name('updateUser')->middleware('isTeacher', 'auth');
 
 //  SHOW
-Route::get('/showUser/{id}',[UserController::class,'show'])->name('showUser')->middleware('auth');
+Route::get('/readUserGrade/{id}',[UserController::class,'show'])->name('readUserGrade')->middleware('auth');
 
 //Validation
 Route::post('/save', [ValidateformController::class, 'saveDataForm']);

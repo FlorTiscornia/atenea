@@ -21,13 +21,23 @@
             <form action="{{ route('deleteUser', ['id' => $user->id]) }}" method="post">
                 @method('delete')
                 @csrf
-                    <div class="d-flex justify-content-end">
-                    
-                        <button type="submit" class="btn text-end mt-2" onclick="return confirm('¿Quieres borrar? {{ $user->name }} - ID {{ $user->id }} ')">Borrar Estudiante
+                    <div>
+                        <button type="submit" id="deleteButton" onclick="return confirm('¿Quieres borrar? {{ $user->name }} - ID {{ $user->id }} ')">Borrar Estudiante
                         </button>
-                    
                     </div>
-                    <a href="{{ route('editUser', ['id'=>$user->id]) }}">Editar Estudiante</a>
+                    <br>
+                    <div>
+                    <a href="{{ route('editUser', ['id'=>$user->id]) }}" id="editButton">Editar Estudiante</a>
+                    </div>
+                    <br>
+                    <div>
+                    <button class="btn-secondary">
+                        <a id="buttonAdd" href="#">
+                        Crear nota
+                        </a>
+                    </button>   
+                    </div>
+                    <br> 
                     @endif
             </form>
             </div>
@@ -211,17 +221,21 @@
             </div>
         </div>
         <br>
-        <div id="averageContainer">
-            <div id="averageCard">
-                Promedio General:
-                    <div>
-                        <input id="averageGrade"> 
-                    </div>
+        <div class="averageBack">
+            @if(Auth::check() && Auth::user()->isTeacher)
+            <div>
+                <a class="returnButton"  href="{{ route('home') }}"> 
+                    <img src="https://res.cloudinary.com/de1i08drf/image/upload/v1675151615/Atenea/flechaAzulIzquierda_ab7yvw.png" alt= "volver a inicio"> 
+                </a> 
             </div>
-        </div>
-        @if(Auth::check() && Auth::user()->isTeacher)
-        <a class="returnButton"  href="{{ route('home') }}"> 
-            <img src="https://res.cloudinary.com/de1i08drf/image/upload/v1675151615/Atenea/flechaAzulIzquierda_ab7yvw.png" alt= "volver a inicio"> 
-        </a> 
-        @endif
+            @endif  
+            <div id="averageContainer">
+                <div id="averageCard">
+                    Promedio General:
+                        <div>
+                            <input id="averageGrade"> 
+                        </div>
+                </div>
+            </div>
+        </div>   
 @endsection

@@ -16,7 +16,7 @@
             <div id="conteinerStudent">
                 <div>
                     <button class="studentInfo">
-                        <a id="studentTag" href="{{ route('showUser', $user->id) }}">{{ ("$user->name") }}</a>
+                        <a id="studentTag" href="{{ route('readUserGrade', $user->id) }}">{{ ("$user->name") }}</a>
                     </button>
                             <!-- <form action="{{ route('deleteUser', ['id' => $user->id]) }}" method="post">
                                 @method('delete')
