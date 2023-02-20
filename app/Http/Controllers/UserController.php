@@ -21,7 +21,7 @@ class UserController extends Controller
             return redirect()->route('home');  
         }
         if (!$user->isTeacher){
-            return redirect()->route('showUser',$user->id);  
+            return redirect()->route('readUserGrade',$user->id);  
         }   
     }
 
