@@ -18,47 +18,74 @@
                 </div>
                 <h4>Lengua</h4>
                 <div class="mb-3">
-                    
-                    <input type="text" id="lengua" name="grades[lengua]" class="form-control" placeholder="Escribe la nota de Lengua">
+                    <div class="row g-3">
+                            <div class="col-sm-4">
+                                <input type="number" class="form-control" placeholder="Examen 1" aria-label="Examen 1">
+                            </div>
+                            <div class="col-sm">
+                                <input type="number" class="form-control" placeholder="Examen 2" aria-label="Examen 2">
+                            </div>
+                            <div class="col-sm">
+                                <input type="number" class="form-control" placeholder="Examen 3" aria-label="Examen 3">
+                            </div>
+                    </div>
                 </div>
                 <h4>Matemáticas</h4>
                 <div class="mb-3">
-                    
-                    <input type="text" id="matematicas" name="grades[matematicas]" class="form-control" placeholder="Escribe la nota de Matemáticas">
+                    <div class="row g-3">
+                            <div class="col-sm-4">
+                                <input type="number" class="form-control" placeholder="Examen 1" aria-label="Examen 1">
+                            </div>
+                            <div class="col-sm">
+                                <input type="number" class="form-control" placeholder="Examen 2" aria-label="Examen 2">
+                            </div>
+                            <div class="col-sm">
+                                <input type="number" class="form-control" placeholder="Examen 3" aria-label="Examen 3">
+                            </div>
+                    </div>
                 </div>
                 <h4>Inglés</h4>
                 <div class="mb-3">
-                    
-                    <input type="text" id="ingles" name="grades[ingles]" class="form-control" placeholder="Escribe la nota de Inglés">
+                    <div class="row g-3">
+                            <div class="col-sm-4">
+                                <input type="number" class="form-control" placeholder="Examen 1" aria-label="Examen 1">
+                            </div>
+                            <div class="col-sm">
+                                <input type="number" class="form-control" placeholder="Examen 2" aria-label="Examen 2">
+                            </div>
+                            <div class="col-sm">
+                                <input type="number" class="form-control" placeholder="Examen 3" aria-label="Examen 3">
+                            </div>
+                    </div>
                 </div>
                 <h4>Historia</h4>
                 <div class="mb-3">
                 <div class="row g-3">
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" placeholder="Examen 1" aria-label="City">
+                            <input type="number" class="form-control" placeholder="Examen 1" aria-label="Examen 1">
                         </div>
                         <div class="col-sm">
-                            <input type="text" class="form-control" placeholder="Examen 2" aria-label="State">
+                            <input type="number" class="form-control" placeholder="Examen 2" aria-label="Examen 2">
                         </div>
                         <div class="col-sm">
-                            <input type="text" class="form-control" placeholder="Examen 3" aria-label="Zip">
+                            <input type="number" class="form-control" placeholder="Examen 3" aria-label="Examen 3">
                         </div>
                 </div>
                 <h4>Geografía</h4>
                 <div class="mb-3">
-                    <div class="row g-3">
+                <div class="row g-3">
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" placeholder="Examen 1" aria-label="City">
+                            <input type="number" class="form-control" placeholder="Examen 1" aria-label="Examen 1">
                         </div>
                         <div class="col-sm">
-                            <input type="text" class="form-control" placeholder="Examen 2" aria-label="State">
+                            <input type="number" class="form-control" placeholder="Examen 2" aria-label="Examen 2">
                         </div>
                         <div class="col-sm">
-                            <input type="text" class="form-control" placeholder="Examen 3" aria-label="Zip">
+                            <input type="number" class="form-control" placeholder="Examen 3" aria-label="Examen 3">
                         </div>
-    </div>  
+                </div>  
                     </div>
-            </form>
+            
         </div>
         <div class="formBottomActions">
            
@@ -68,6 +95,7 @@
             <input type="reset" name="reset "value="Resetear datos" class="resetButton">
             <button type="submit" value="saveButton" class="formButton" id="btnSend">Añadir calificaciones
             </button>
+            </form>
         </div>
     </div>
 @endsection

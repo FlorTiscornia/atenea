@@ -45,8 +45,11 @@ Route::post('/save', [ValidateformController::class, 'saveDataForm']);
 //CRUD GRADES
 
 //C
-Route::get('/grades/create/{id}', [GradeController::class, 'create']) ->name('createGrade')->middleware('isTeacher', 'auth');
-Route::post('/grades/store/{id}', [GradeController::class, 'store']) ->name('storeGrade')->middleware('isTeacher', 'auth');
+Route::get('/user/{id}/grade/create', [GradeController::class, 'create'])->name('createGrade')->middleware('isTeacher', 'auth');
+Route::post('/user/{id}/grade', [GradeController::class, 'store'])->name('storeGrade')->middleware('isTeacher', 'auth');
+
+/* Route::get('/grades/create/{id}', [GradeController::class, 'create']) ->name('createGrade')->middleware('isTeacher', 'auth');
+Route::post('/grades/store/{id}', [GradeController::class, 'store']) ->name('storeGrade')->middleware('isTeacher', 'auth'); */
 
 
 /* //U
