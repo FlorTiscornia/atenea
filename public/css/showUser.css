@@ -55,6 +55,9 @@ p{
 .btn-secondary{
     color: white!important;
 }
+#buttonAdd{
+    color: white!important;
+}
 .averageBack{
     display:flex;
     margin-left: 5%;
