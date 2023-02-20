@@ -14,11 +14,7 @@
                 </div>
     <div>
         <label for="trimester" class="form-label">Trimestre</label>
-        <select name="subject" class="form-control" id="subject">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-        </select>
+        <input type="number" name="trimester" class="form-control" id="trimester"  value="{{ old('trimester') }}">
     </div>
     <div>
         <label for="subject" class="form-label">Asignatura</label>
