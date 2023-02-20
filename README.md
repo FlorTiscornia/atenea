@@ -9,17 +9,15 @@ Atenea is an app to consult and manage school grades. This project is being deve
 ## 📸Screenshots:
 | Sketch | Figma | Atomic Design |Workflow|
 | :---: | :---: | :---: | :---: |
-|<img src="https://user-images.githubusercontent.com/113030390/218047493-11ac48b1-6081-4de5-93b3-e98d3b83b170.png" width="50%"> |<img src="https://user-images.githubusercontent.com/113030390/218046666-f83a1493-5d35-4563-8f39-8309086cb371.png" width="50%"> |<img src="https://user-images.githubusercontent.com/113030390/218046491-cfb78369-022c-4cf4-9cd0-82e1694c1c53.png" width="80%"> |<img src="https://user-images.githubusercontent.com/113030390/218044904-6be748b6-a49e-47e9-9e29-1a0d60e5fe99.png" width="50%">|
+|<img src="https://user-images.githubusercontent.com/113030390/218047493-11ac48b1-6081-4de5-93b3-e98d3b83b170.png" width="50%"> |<img src="https://user-images.githubusercontent.com/113030390/218046666-f83a1493-5d35-4563-8f39-8309086cb371.png" width="50%"> |<img src="https://user-images.githubusercontent.com/113030390/218046491-cfb78369-022c-4cf4-9cd0-82e1694c1c53.png" width="50%"> |<img src="https://user-images.githubusercontent.com/113030390/218044904-6be748b6-a49e-47e9-9e29-1a0d60e5fe99.png" width="50%">|
 
 ## Mobile format:
 | User |
 | --- | --- |
 |<img style="width:135px;" src="">|<img style="width:150px;" src="">|
 
-## Screen format:
-| Admin | 
-| --- | --- |
-|<img style="width:135px;" src="">|<img style="width:150px;" src="">|
+## Screen format (teacher): 
+<img src="https://user-images.githubusercontent.com/113030390/220101000-dd8aa893-2b14-4814-894a-9b5c983b79ff.png" width="50%"> <img src="https://user-images.githubusercontent.com/113030390/220101080-efcc1dd7-8cec-426e-b087-fce781df23ae.png" width="50%"> <img src="https://user-images.githubusercontent.com/113030390/220101183-beb4f854-48b4-4e61-909f-f51663cfb29d.png" width="50%">
 
 ## 🔧Stacks:
 | Stacks |
@@ -33,7 +31,7 @@ Atenea is an app to consult and manage school grades. This project is being deve
 + Lola García https://github.com/LolaGM
 + Carmen Gallardo https://github.com/CarmenGP
 + Verónica Flores https://github.com/veflo13
-+ Elena https://github.com/elenarjonap
++ Elena Mª Pérez https://github.com/elenarjonap
 
 ## 💻How to install this project
 
