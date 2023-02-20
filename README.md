@@ -75,11 +75,11 @@ To run the tests open terminal and enter the command
 ```
 
 📚Methodology:
-- Methodology Agile with Scrum
-- Mob Programming
-- Pair Programming
-- TDD
-- Software Design Pattern MVC developed with Laravel framework
+- Methodology Agile with Scrum.
+- Mob Programming.
+- Pair Programming.
+- TDD.
+- Software Design Pattern MVC developed with Laravel framework.
 
 
 🧪Next Steps:
