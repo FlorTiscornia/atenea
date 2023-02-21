@@ -22,7 +22,7 @@
                 @method('delete')
                 @csrf
                     <div>
-                        <button type="submit" id="deleteButton" onclick="return confirm('¿Quieres borrar? {{ $user->name }} - ID {{ $user->id }} ')">Borrar Estudiante
+                        <button type="submit" id="deleteButton" onclick="return confirm('¿Quieres borrar a {{ $user->name }} ? ')">Borrar Estudiante
                         </button>
                     </div>
                     <br>
