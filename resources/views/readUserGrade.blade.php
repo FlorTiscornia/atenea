@@ -18,7 +18,7 @@
             </div>
             <div>
             @if(Auth::check() && Auth::user()->isTeacher)    
-            <form action="{{ route('deleteUser', ['id' => $user->id]) }}" method="post">
+            <form action="{{ route('deleteUser', ['id' => $user->name]) }}" method="post">
                 @method('delete')
                 @csrf
                     <div>
